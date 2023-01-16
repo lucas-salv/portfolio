@@ -3,11 +3,11 @@ import { styled } from "@/helpers/stitches.config"
 export const Container = styled('section', {
     display: 'flex',
     flexDirection: 'column',
-    gap: 20
+    gap: '$space$2'
 })
 
 export const Text = styled('h2', {
     fontWeight: 'normal',
-    fontSize: '14px',
+    fontSize: '$sizes$1',
     textAlign: 'center'
 })

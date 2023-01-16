@@ -8,7 +8,7 @@ export const LinkLogo = styled('a', {
 export const TitleLogo = styled('h1', {
     fontWeight: 'normal',
     textTransform: 'uppercase',
-    fontSize: '14px',
-    letterSpacing: '14px',
+    fontSize: '$sizes$1',
+    letterSpacing: '$sizes$1',
     textAlign: 'center'
 })

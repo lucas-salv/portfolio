@@ -18,7 +18,8 @@ export const {
     },
     space: {
         1: '10px',
-        2: '20px'
+        2: '20px',
+        3: '40px'
     }
   }
  });
