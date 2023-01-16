@@ -1,6 +1,8 @@
 import { styled } from "@stitches/react";
 
 export const LinkLogo = styled('a', {
+    textDecoration: 'none',
+    color: 'black'
 })
 
 export const TitleLogo = styled('h1', {
