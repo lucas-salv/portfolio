@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { globalCss } from '@stitches/react'
 import Header from '@/layout/Header'
+import Main from '@/layout/Main'
 
 const globalStyles = globalCss({
   '*': {
@@ -24,9 +25,8 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Header />
-      </main>
+      <Header />
+      <Main />
     </>
   )
 }
