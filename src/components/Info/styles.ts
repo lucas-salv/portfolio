@@ -1,4 +1,4 @@
-import { styled } from "@stitches/react";
+import { styled } from "@/helpers/stitches.config"
 
 export const Container = styled('section', {
     display: 'flex',

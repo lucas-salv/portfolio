@@ -1,8 +1,8 @@
-import { styled } from "@stitches/react";
+import { styled } from "@/helpers/stitches.config"
 
 export const LinkLogo = styled('a', {
     textDecoration: 'none',
-    color: 'black'
+    color: '$text'
 })
 
 export const TitleLogo = styled('h1', {
