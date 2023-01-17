@@ -1,5 +1,7 @@
 import { Container, ContainerText, Text, ContainerSocialButtons } from "./styles"
 import Button from "../Button"
+import IconButton from "../IconButton"
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 export default () => {
     return (
@@ -12,7 +14,9 @@ export default () => {
             <ContainerSocialButtons>
                 <Button label="Repositório" />
                 <Button href="https://google.com" target="_blank" label="Repositório 2" variant="outline" />
+                <IconButton icon={<FaLinkedinIn />} />
             </ContainerSocialButtons>
+                <IconButton icon={<FaGithub />} variant="outline" size="lg" />
         </Container>
     )
 }

@@ -1,14 +1,15 @@
-import { ButtonHTMLAttributes, useEffect, useRef } from "react"
+import { ButtonHTMLAttributes, useEffect, useRef, cloneElement } from "react"
 import { Button } from "./styles"
 
 type buttonProps = {
-    label: string,
+    icon: JSX.Element,
     href?: string,
     target?: string,
     variant?: 'solid' | 'outline',
+    size?: 'md' | 'lg',
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-export default ({ label, variant = 'solid', href, target, ...props}:buttonProps) => {
+export default ({ icon, variant = 'solid', size = 'md', href, target, ...props}:buttonProps) => {
     const btnRef = useRef<HTMLButtonElement>(null);
 
     useEffect(() => {
@@ -33,8 +34,9 @@ export default ({ label, variant = 'solid', href, target, ...props}:buttonProps)
                     {...props}
                     ref={btnRef}
                     variant={variant}
+                    size={size}
                 >
-                        {label}
+                        {icon && cloneElement(icon, { size: size == 'lg' ? '32px' : '18px' })}
                 </Button>
             </a>
         )
@@ -44,8 +46,9 @@ export default ({ label, variant = 'solid', href, target, ...props}:buttonProps)
                 {...props}
                 ref={btnRef}
                 variant={variant}
+                size={size}
             >
-                    {label}
+                    {icon && cloneElement(icon, { size: size == 'lg' ? '32px' : '18px' })}
             </Button>
         )
     )
