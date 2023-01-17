@@ -2,7 +2,7 @@ import { styled } from "@/helpers/stitches.config"
 
 export const LinkLogo = styled('a', {
     textDecoration: 'none',
-    color: '$text'
+    color: '$black'
 })
 
 export const TitleLogo = styled('h1', {

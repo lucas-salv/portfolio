@@ -8,7 +8,12 @@ const globalStyles = globalCss({
     margin: 0,
     padding: 0,
     boxSizing: 'border-box',
-    fontFamily: 'Montserrat, sans-serif'
+    fontFamily: 'Montserrat, sans-serif',
+    '&:focus-visible': {
+      outline: '2px solid',
+      outlineColor: 'rgba(52, 146, 235, 0.5)',
+      outlineOffset: '5px'
+    }
   }
 })
 
