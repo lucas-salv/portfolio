@@ -12,11 +12,9 @@ export default () => {
                 mensagem no e-mail <strong>salv.dev.br@gmail.com</strong></Text>
             </ContainerText>
             <ContainerSocialButtons>
-                <Button label="Repositório" />
-                <Button href="https://google.com" target="_blank" label="Repositório 2" variant="outline" />
-                <IconButton icon={<FaLinkedinIn />} />
+                <IconButton icon={<FaLinkedinIn />} href="#" target="_blank" variant="outline" size="lg" />
+                <IconButton icon={<FaGithub />} href="#" target="_blank" variant="outline" size="lg" />
             </ContainerSocialButtons>
-                <IconButton icon={<FaGithub />} variant="outline" size="lg" />
         </Container>
     )
 }

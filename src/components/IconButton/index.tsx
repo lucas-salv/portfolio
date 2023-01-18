@@ -1,5 +1,6 @@
-import { ButtonHTMLAttributes, useEffect, useRef, cloneElement } from "react"
+import { ButtonHTMLAttributes, useRef, cloneElement } from "react"
 import { Button } from "./styles"
+import useTriggerAnimations from "@/utils/useTriggerAnimations"
 
 type buttonProps = {
     icon: JSX.Element,
@@ -10,35 +11,22 @@ type buttonProps = {
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 export default ({ icon, variant = 'solid', size = 'md', href, target, ...props}:buttonProps) => {
+    const btnRefAsLink = useRef<HTMLAnchorElement>(null);
     const btnRef = useRef<HTMLButtonElement>(null);
-
-    useEffect(() => {
-
-        function activeButtonPulseAnimation() {
-            btnRef.current?.classList.remove('pulse-animation');
-            setTimeout(() => {
-                btnRef.current?.classList.add('pulse-animation');
-            }, 10);  
-        }
-
-        btnRef.current?.addEventListener('mousedown', activeButtonPulseAnimation)
-
-        return () => btnRef.current?.removeEventListener('mousedown', activeButtonPulseAnimation)
-
-    }, [])
+    useTriggerAnimations('pulse-animation', 'mousedown', href ? btnRefAsLink : btnRef);
 
     return (
         href ? (
-            <a href={href} target={target}>
-                <Button 
-                    {...props}
-                    ref={btnRef}
-                    variant={variant}
-                    size={size}
-                >
-                        {icon && cloneElement(icon, { size: size == 'lg' ? '32px' : '18px' })}
-                </Button>
-            </a>
+            <Button 
+                as="a"
+                ref={btnRefAsLink}
+                href={href}
+                target={target}
+                variant={variant}
+                size={size}
+            >
+                    {icon && cloneElement(icon, { size: size == 'lg' ? '32px' : '18px' })}
+            </Button>
         )
         :
         (

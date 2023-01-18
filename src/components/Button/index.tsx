@@ -1,5 +1,6 @@
-import { ButtonHTMLAttributes, useEffect, useRef } from "react"
+import { ButtonHTMLAttributes, useRef } from "react"
 import { Button } from "./styles"
+import useTriggerAnimations from "@/utils/useTriggerAnimations"
 
 type buttonProps = {
     label: string,
@@ -9,34 +10,21 @@ type buttonProps = {
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 export default ({ label, variant = 'solid', href, target, ...props}:buttonProps) => {
+    const btnRefAsLink = useRef<HTMLAnchorElement>(null);
     const btnRef = useRef<HTMLButtonElement>(null);
-
-    useEffect(() => {
-
-        function activeButtonPulseAnimation() {
-            btnRef.current?.classList.remove('pulse-animation');
-            setTimeout(() => {
-                btnRef.current?.classList.add('pulse-animation');
-            }, 10);  
-        }
-
-        btnRef.current?.addEventListener('mousedown', activeButtonPulseAnimation)
-
-        return () => btnRef.current?.removeEventListener('mousedown', activeButtonPulseAnimation)
-
-    }, [])
+    useTriggerAnimations('pulse-animation', 'mousedown', href ? btnRefAsLink : btnRef);
 
     return (
         href ? (
-            <a href={href} target={target}>
-                <Button 
-                    {...props}
-                    ref={btnRef}
+                <Button
+                    as="a"
+                    ref={btnRefAsLink}
+                    href={href}
+                    target={target}
                     variant={variant}
                 >
                         {label}
                 </Button>
-            </a>
         )
         :
         (

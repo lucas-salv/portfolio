@@ -17,5 +17,7 @@ export const Text = styled('h2', {
 
 export const ContainerSocialButtons = styled('div', {
     display: 'flex',
-    gap: 20
+    justifyContent: 'center',
+    gap: 20,
+    marginTop: '20px'
 })

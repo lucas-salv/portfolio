@@ -9,18 +9,15 @@ const pulse = keyframes({
     }
 });
 
-export const Link = styled('a', {
-    textDecoration: 'none',
-})
-
 export const Button = styled('button', {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     border: 'none',
     cursor: 'pointer',
-    transition: 'all .2s ease-in-out',
+    transition: 'transform .2s ease-in-out',
     position: 'relative',
+    textDecoration: 'none',
 
     '&::after': {
         content: '',
@@ -42,9 +39,6 @@ export const Button = styled('button', {
         variant: {
             'solid': {
                 backgroundColor: '$black',
-                [`${Link} &`]: {
-                    color: '$white',
-                },
                 color: '$white',
                 border: '1px solid $black',
                 
@@ -54,9 +48,6 @@ export const Button = styled('button', {
             },
             'outline': {
                 backgroundColor: '$white',
-                [`${Link} &`]: {
-                    color: '$black',
-                },
                 color: '$black',
                 border: '1px solid $black',
 
