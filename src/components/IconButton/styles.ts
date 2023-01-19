@@ -4,7 +4,7 @@ import { keyframes } from "@stitches/react";
 const pulse = keyframes({
     '100%': {
         transform: 'scale(1.3, 1.3)',
-        borderColor: '$black',
+        borderColor: '$primaryColor',
         opacity: 0
     }
 });
@@ -38,18 +38,18 @@ export const Button = styled('button', {
     variants: {
         variant: {
             'solid': {
-                backgroundColor: '$black',
-                color: '$white',
-                border: '1px solid $black',
+                backgroundColor: '$primaryColor',
+                color: '$secondaryColor',
+                border: '1px solid $primaryColor',
                 
                 '&:hover': {
                     transform: 'scale(95%, 95%)'
                 },
             },
             'outline': {
-                backgroundColor: '$white',
-                color: '$black',
-                border: '1px solid $black',
+                backgroundColor: '$secondaryColor',
+                color: '$primaryColor',
+                border: '1px solid $primaryColor',
 
                 '&:hover': {
                     transform: 'scale(95%, 95%)'

@@ -8,8 +8,8 @@ export const {
 } = createStitches({ 
   theme: {
     colors: {
-      black: "black",
-      white: "white",
+      primaryColor: "black",
+      secondaryColor: "white",
     },
     sizes: {
         1: '14px',
