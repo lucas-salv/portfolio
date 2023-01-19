@@ -14,7 +14,9 @@ export const {
     sizes: {
         1: '14px',
         2: '16px',
-        3: '18px'
+        3: '18px',
+        4: '20px',
+        5: '22px'
     },
     space: {
         1: '10px',
