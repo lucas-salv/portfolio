@@ -1,5 +1,12 @@
-export default () => {
+import React, { PropsWithChildren } from "react"
+import { CardSlider } from "./styles"
+
+export default ({ children}:PropsWithChildren<{}>) => {
     return (
-        <div></div>
+        <CardSlider>
+            <div className="cardContainer">
+                {children}
+            </div>
+        </CardSlider>
     )
 }

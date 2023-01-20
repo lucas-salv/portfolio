@@ -8,11 +8,13 @@ export const Card = styled('div', {
     backgroundColor: 'lightgray',
     boxShadow: '0px 4px 20px 0px rgba(0,0,0,0.25)',
     cursor: 'pointer',
-    transition: 'transform .2s',
+    transition: 'transform .2s, opacity .2s',
 
     '&:hover': {
-        transform: 'scale(1.05, 1.05)',
-    }
+        transform: 'scale(1.15, 1.15)',
+    },
+
+    
 });
 
 export const CardContainerTitle = styled('div', {
