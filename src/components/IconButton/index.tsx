@@ -25,7 +25,7 @@ export default ({ icon, variant = 'solid', size = 'md', href, target, ...props}:
                 variant={variant}
                 size={size}
             >
-                    {icon && cloneElement(icon, { size: size == 'lg' ? '32px' : '18px' })}
+                    {icon && cloneElement(icon, { size: size == 'lg' ? '32px' : '22px' })}
             </Button>
         )
         :
@@ -36,7 +36,7 @@ export default ({ icon, variant = 'solid', size = 'md', href, target, ...props}:
                 variant={variant}
                 size={size}
             >
-                    {icon && cloneElement(icon, { size: size == 'lg' ? '32px' : '18px' })}
+                    {icon && cloneElement(icon, { size: size == 'lg' ? '32px' : '22px' })}
             </Button>
         )
     )

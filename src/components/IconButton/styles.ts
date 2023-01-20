@@ -15,7 +15,7 @@ export const Button = styled('button', {
     alignItems: 'center',
     border: 'none',
     cursor: 'pointer',
-    transition: 'transform .2s ease-in-out',
+    transition: 'transform .1s ease-in-out',
     position: 'relative',
     textDecoration: 'none',
 

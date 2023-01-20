@@ -1,22 +1,43 @@
 import { styled } from "@/helpers/stitches.config";
 
 export const CardSlider = styled('div', {
-    marginTop: '$space$2',
-    overflow: 'hidden',
+    display: 'flex',
+    flexDirection: 'column',
     '& > .cardContainer': {
-        display: 'flex',
-        gap: 20,
-        flexWrap: 'nowrap',
-        width: '200%',
-        margin: '30px 0',
-        marginLeft: 250,
-        pointerEvents: 'none',
-        '& > div': {
-            pointerEvents: 'auto'
-        },
+        overflowX: 'scroll',
+        overflowY: 'hidden',
 
-        '&:hover > div:not(:hover)': {
-            opacity: 0.5
-        },
-    }
+        '& > .slider': {
+            display: 'flex',
+            gap: 20,
+            flexWrap: 'nowrap',
+            width: '700%',
+            marginLeft: '20px',
+            pointerEvents: 'none',
+            '& > div': {
+                pointerEvents: 'auto'
+            },
+    
+            '&:hover > div:not(:hover)': {
+                opacity: 0.5
+            },
+        }
+    },
 });
+
+export const CardSliderHeader = styled('div', {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+    margin: '20px 20px 0 20px',
+})
+
+export const CardSliderTitle = styled('h2', {
+    fontSize: '$sizes$1',
+    fontWeight: 'normal',
+});
+
+export const CardSliderContainerButtons = styled('div', {
+    display: 'none',
+    gap: 10,
+})

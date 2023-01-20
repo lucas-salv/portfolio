@@ -11,7 +11,7 @@ export const Card = styled('div', {
     transition: 'transform .2s, opacity .2s',
 
     '&:hover': {
-        transform: 'scale(1.15, 1.15)',
+        //transform: 'scale(1.15, 1.15)',
     },
 
     
