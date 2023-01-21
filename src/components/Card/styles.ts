@@ -10,9 +10,11 @@ export const Card = styled('div', {
     cursor: 'pointer',
     transition: 'transform .2s, opacity .2s',
 
-    '&:hover': {
-        //transform: 'scale(1.15, 1.15)',
-    },
+    '@bp3': {
+        '&:hover': {
+            transform: 'scale(1.15, 1.15)',
+        },
+    }
 
     
 });

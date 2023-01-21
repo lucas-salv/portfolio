@@ -22,6 +22,12 @@ export const {
         1: '10px',
         2: '20px',
         3: '40px'
-    }
-  }
+    },
+  },
+  media: {
+    bp1: '(min-width: 600px)',
+    bp2: '(min-width: 768px)',
+    bp3: '(min-width: 1024px)',
+    bp4: '(min-width: 1280px)',
+  },
  });

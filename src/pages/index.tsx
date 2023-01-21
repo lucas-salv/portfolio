@@ -9,6 +9,7 @@ const globalStyles = globalCss({
     padding: 0,
     boxSizing: 'border-box',
     fontFamily: 'Montserrat, sans-serif',
+    fontSize: '$sizes$1',
     '&:focus-visible': {
       outline: '2px solid',
       outlineColor: 'rgba(52, 146, 235, 0.5)',
@@ -23,7 +24,8 @@ const globalStyles = globalCss({
     },
     '::-webkit-scrollbar-thumb': {
       background: 'rgba(0,0,0,0.2)',
-    }
+    },
+
   }
 })
 
