@@ -10,5 +10,9 @@ export const TitleLogo = styled('h1', {
     textTransform: 'uppercase',
     fontSize: '10px',
     letterSpacing: '$sizes$1',
-    textAlign: 'center'
+    textAlign: 'center',
+
+    '@bp0': {
+        fontSize: '6px',
+    },
 })

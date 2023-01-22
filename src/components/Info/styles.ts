@@ -1,8 +1,12 @@
 import { styled } from "@/helpers/stitches.config"
 
 export const Container = styled('section', {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 'calc(70vh - 153px)',
     margin: '0 20px',
-    marginTop: '20px',
 
     '@bp1': {
         width: '560px',
@@ -17,9 +21,24 @@ export const ContainerText = styled('div', {
     gap: '$space$2'
 })
 
-export const Text = styled('h2', {
+export const MainText = styled('h2', {
     fontWeight: 'normal',
     textAlign: 'center',
+    fontSize: '$sizes$3',
+
+    '@bp0': {
+        fontSize: '$sizes$1',
+    },
+
+    '@bp2': {
+        fontSize: '$sizes$5'
+      }
+})
+
+export const Text = styled('h4', {
+    fontWeight: 'normal',
+    textAlign: 'center',
+    fontSize: '$sizes$1',
 
     '@bp2': {
         fontSize: '$sizes$2'
