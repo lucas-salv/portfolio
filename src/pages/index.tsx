@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { globalCss } from '@stitches/react'
 import Header from '@/layout/Header'
 import Main from '@/layout/Main'
+import { useEffect } from 'react'
 
 const globalStyles = globalCss({
   '*': {
@@ -26,11 +27,29 @@ const globalStyles = globalCss({
       background: 'rgba(0,0,0,0.2)',
     },
 
+  },
+  'body': {
+    overflowY: 'hidden'
   }
 })
 
 export default function Home() {
   globalStyles();
+  
+  useEffect(() => {
+    window.addEventListener('wheel', (e) => {
+      if(e.deltaY > 0) {
+        if(!document.querySelector('.my-projects')?.classList.contains('up-animation')){
+          document.querySelector('.my-projects')?.classList.add('up-animation')
+        }
+      } else {
+        if(document.querySelector('.my-projects')?.classList.contains('up-animation')){
+          document.querySelector('.my-projects')?.classList.remove('up-animation')
+        }
+      }
+    })
+  }, []);
+  
   return (
     <>
       <Head>

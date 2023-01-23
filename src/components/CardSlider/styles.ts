@@ -3,6 +3,7 @@ import { styled } from "@/helpers/stitches.config";
 export const CardSlider = styled('div', {
     display: 'flex',
     flexDirection: 'column',
+
     '& > .cardContainer': {
         overflowX: 'scroll',
         overflowY: 'hidden',
