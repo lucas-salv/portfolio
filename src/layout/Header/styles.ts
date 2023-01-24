@@ -1,8 +1,13 @@
 import { styled } from "@/helpers/stitches.config"
 
 export const Header = styled('header', {
+    position: 'fixed',
     display: 'flex',
     justifyContent: 'center',
-    padding: '$space$2 0',
-    borderBottom: '1px solid rgba(0,0,0,0.1)'
+    alignItems: 'center',
+    width: '100%',
+    height: '54px',
+    borderBottom: '1px solid rgba(0,0,0,0.1)',
+    backgroundColor: '$secondaryColor',
+    zIndex: 3
 })

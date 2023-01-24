@@ -1,7 +1,5 @@
 import { Container, ContainerText, MainText, Text, ContainerSocialButtons } from "./styles"
-import Button from "../Button"
-import IconButton from "../IconButton"
-import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import SocialMedia from "../SocialMedia";
 
 export default () => {
     return (
@@ -12,8 +10,7 @@ export default () => {
                 mensagem no e-mail <strong>salv.dev.br@gmail.com</strong></Text>
             </ContainerText>
             <ContainerSocialButtons>
-                <IconButton icon={<FaLinkedinIn />} href="#" target="_blank" variant="outline" size="lg" />
-                <IconButton icon={<FaGithub />} href="#" target="_blank" variant="outline" size="lg" />
+                <SocialMedia />
             </ContainerSocialButtons>
         </Container>
     )

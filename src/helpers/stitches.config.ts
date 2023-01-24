@@ -25,10 +25,12 @@ export const {
     },
   },
   media: {
+    bp0: '(max-width: 344px)',
     bp1: '(min-width: 600px)',
     bp2: '(min-width: 768px)',
     bp3: '(min-width: 1024px)',
     bp4: '(min-width: 1280px)',
-    bp0: '(max-width: 344px)'
+    bph0: '(max-height: 570px)',
+    bph1: '(max-height: 650px)',
   },
  });

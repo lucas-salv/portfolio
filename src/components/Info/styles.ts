@@ -6,12 +6,17 @@ export const Container = styled('section', {
     justifyContent: 'center',
     alignItems: 'center',
     height: 'calc(70vh - 153px)',
-    margin: '0 20px',
+    margin: '54px 20px 0 20px',
+
+    '@bph0': {
+        height: 'auto',
+        padding: '20px'
+    },
 
     '@bp1': {
         width: '560px',
         margin: '0 auto',
-        marginTop: '20px',
+        marginTop: '54px',
     }
 })
 
@@ -46,8 +51,5 @@ export const Text = styled('h4', {
 })
 
 export const ContainerSocialButtons = styled('div', {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '$space$2',
-    marginTop: '$space$2'
-})
+    
+});

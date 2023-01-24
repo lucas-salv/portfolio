@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { globalCss } from '@stitches/react'
 import Header from '@/layout/Header'
 import Main from '@/layout/Main'
+import { useEffect } from 'react'
 
 const globalStyles = globalCss({
   '*': {
@@ -28,12 +29,35 @@ const globalStyles = globalCss({
 
   },
   'body': {
-    overflowY: 'hidden'
+    overflowY: 'hidden',
+    '&.scrolled': {
+      overflowY: 'scroll'
+    }
   }
 })
 
 export default function Home() {
   globalStyles();
+
+  useEffect(() => {
+    function toggleScroll() {
+      if(window.matchMedia("(max-height:570px)").matches) {
+        document.querySelector('body')?.classList.add('scrolled')
+      } else {
+        window.scrollTo(0, 0)
+        document.querySelector('body')?.classList.remove('scrolled')
+      }
+    }
+
+    if(window.matchMedia("(max-height:570px)").matches) {
+      document.querySelector('body')?.classList.add('scrolled')
+    }
+
+    window.addEventListener('resize', toggleScroll);
+
+    return () => window.removeEventListener('resize', toggleScroll)
+    
+  }, [])
   
   return (
     <>
