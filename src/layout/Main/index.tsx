@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Main, MyProjects } from "./styles";
 import Info from "@/components/Info";
-import MySkills from "@/components/mySkills";
+import MySkills from "@/components/MySkills";
 import Card from "@/components/Card";
 import CardSlider from "@/components/CardSlider";
 
