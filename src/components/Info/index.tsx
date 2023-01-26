@@ -10,7 +10,7 @@ export default () => {
                 mensagem no e-mail <strong>salv.dev.br@gmail.com</strong></Text>
             </ContainerText>
             <ContainerSocialButtons>
-                <SocialMedia />
+                <SocialMedia size="lg" />
             </ContainerSocialButtons>
         </Container>
     )

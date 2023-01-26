@@ -51,5 +51,5 @@ export const Text = styled('h4', {
 })
 
 export const ContainerSocialButtons = styled('div', {
-    
+    marginTop: '$space$2'
 });

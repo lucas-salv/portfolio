@@ -50,7 +50,6 @@ export default () => {
             <FloatContainerSocialInfo className="test-float">
                 <SocialMedia />
                 <Email>
-                    <p>ou</p>
                     <strong>salv.dev.br@gmail.com</strong>
                 </Email>
             </FloatContainerSocialInfo>

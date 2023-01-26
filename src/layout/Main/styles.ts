@@ -25,17 +25,37 @@ export const MyProjects = styled('section', {
 export const FloatContainerSocialInfo = styled('div',{
     position: 'absolute',
     top: '-100px',
-    display: 'none',
-    width: '100%',
+    right: '20px',
+    display: 'flex',
+    alignItems: 'center',
     transition: 'top .5s',
-    zIndex: 1,
-    '&.displayed': {
-        top: '60px'
+    zIndex: 5,
+
+    '@bp1': {
+        right: '20px',
+        '&.displayed': {
+            top: '3px',
+        },
+    },
+    '@bp2': {
+        right: '100px'
+    },
+
+    '@bp3': {
+        right: '50px'
+    },
+
+    '@bp4': {
+        right: 'calc(300px - 178px)'
     }
 });
 
 export const Email = styled('div', {
-    display: 'flex',
+    display: 'none',
     flexDirection: 'column',
     alignItems: 'center',
+    '@bp3': {
+        display: 'flex',
+        marginLeft: '10px'
+    }
 })
