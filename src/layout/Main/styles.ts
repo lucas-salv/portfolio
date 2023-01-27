@@ -77,6 +77,11 @@ export const ContainerPhrase = styled('section', {
         transitionDelay: '.5s',
     },
 
+    '@bp1': {
+        width: '560px',
+        margin: '0 auto',
+    },
+
     '@bph2': {
         display: 'flex'
     },
