@@ -32,5 +32,7 @@ export const {
     bp4: '(min-width: 1280px)',
     bph0: '(max-height: 570px)',
     bph1: '(max-height: 650px)',
+    bph2: '(min-height: 768px)',
+    bph3: '(min-height: 800px)'
   },
  });

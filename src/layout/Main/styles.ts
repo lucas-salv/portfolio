@@ -7,6 +7,8 @@ export const Main = styled('main', {
 
 export const MyProjects = styled('section', {
     position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
     height: '100vh',
     paddingTop: '0',
     background: 'linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%)',
@@ -58,4 +60,53 @@ export const Email = styled('div', {
         display: 'flex',
         marginLeft: '10px'
     }
+});
+
+export const ContainerPhrase = styled('section', {
+    display: 'none',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    height: '100%',
+    gap: '$space$1',
+    padding: '0 20px',
+    opacity: 0,
+    transition: 'opacity 1s',
+    
+    '&.fadeIn': {
+        opacity: 1,
+        transitionDelay: '.5s',
+    },
+
+    '@bph2': {
+        display: 'flex'
+    },
+
+    '@bph3': {
+        top: '30px'
+    }
+});
+
+export const Phrase = styled('em', {
+    textAlign: 'center',
+    fontWeight: 'bold',
+
+    '@bp0': {
+        fontSize: '$sizes$1',
+    },
+
+    '@bp2': {
+        fontSize: '$sizes$2'
+      }
+});
+
+export const Author = styled('p', {
+    textAlign: 'center',
+
+    '@bp0': {
+        fontSize: '$sizes$1',
+    },
+
+    '@bp2': {
+        fontSize: '$sizes$2'
+      }
 })
