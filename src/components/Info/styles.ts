@@ -46,7 +46,10 @@ export const Text = styled('h4', {
     fontSize: '$sizes$1',
 
     '@bp2': {
-        fontSize: '$sizes$2'
+        fontSize: '$sizes$2',
+        '& strong': {
+            fontSize: '$sizes$2',
+        }
       }
 })
 
