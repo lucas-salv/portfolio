@@ -2,6 +2,7 @@ import { styled } from "@/helpers/stitches.config";
 
 export const Card = styled('div', {
     position: 'relative',
+    minWidth: '265px',
     width: '265px',
     height: '440px',
     margin: '20px 0',

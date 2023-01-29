@@ -93,7 +93,6 @@ export const ContainerPhrase = styled('section', {
 
 export const Phrase = styled('em', {
     textAlign: 'center',
-    fontWeight: 'bold',
 
     '@bp0': {
         fontSize: '$sizes$1',

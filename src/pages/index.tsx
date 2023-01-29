@@ -18,10 +18,10 @@ const globalStyles = globalCss({
     },
     '::-webkit-scrollbar': {
       width: '5px',
-      height: '5px'
+      height: '5px',
     },
     '::-webkit-scrollbar-track': {
-      background: 'transparent'
+      background: 'rgba(0,0,0,0.1)',
     },
     '::-webkit-scrollbar-thumb': {
       background: 'rgba(0,0,0,0.2)',

@@ -1,6 +1,7 @@
-import { ButtonHTMLAttributes, useRef, cloneElement } from "react"
+import { ButtonHTMLAttributes, useRef, cloneElement, Ref, forwardRef } from "react"
 import { Button } from "./styles"
 import useTriggerAnimations from "@/utils/useTriggerAnimations"
+import mergeRefs from "@/utils/mergeRefs"
 
 type buttonProps = {
     icon: JSX.Element,
@@ -10,7 +11,7 @@ type buttonProps = {
     size?: 'md' | 'lg',
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-export default ({ icon, variant = 'solid', size = 'md', href, target, ...props}:buttonProps) => {
+export default forwardRef(({ icon, variant = 'solid', size = 'md', href, target, ...props}:buttonProps, ref: Ref<HTMLButtonElement | HTMLAnchorElement>) => {
     const btnRefAsLink = useRef<HTMLAnchorElement>(null);
     const btnRef = useRef<HTMLButtonElement>(null);
     useTriggerAnimations('pulse-animation', 'mousedown', href ? btnRefAsLink : btnRef);
@@ -19,7 +20,7 @@ export default ({ icon, variant = 'solid', size = 'md', href, target, ...props}:
         href ? (
             <Button 
                 as="a"
-                ref={btnRefAsLink}
+                ref={ref ? mergeRefs(btnRefAsLink, ref) : btnRefAsLink}
                 href={href}
                 target={target}
                 variant={variant}
@@ -32,7 +33,7 @@ export default ({ icon, variant = 'solid', size = 'md', href, target, ...props}:
         (
             <Button 
                 {...props}
-                ref={btnRef}
+                ref={ref ? mergeRefs(btnRef, ref) : btnRef}
                 variant={variant}
                 size={size}
             >
@@ -40,4 +41,4 @@ export default ({ icon, variant = 'solid', size = 'md', href, target, ...props}:
             </Button>
         )
     )
-}
+})

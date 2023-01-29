@@ -7,20 +7,15 @@ export const CardSlider = styled('div', {
     '& > .cardContainer': {
         overflowX: 'scroll',
         overflowY: 'hidden',
-
-        
-
-        '@bp4': {
-            overflowX: 'hidden'
-        },
+        scrollBehavior: 'smooth',
 
         '& > .slider': {
             display: 'flex',
             gap: 20,
             flexWrap: 'nowrap',
-            width: '700%',
-            marginLeft: '20px',
+            margin: '0 20px',
             pointerEvents: 'none',
+            transition: 'transform .5s',
             '& > div': {
                 pointerEvents: 'auto'
             },
@@ -30,13 +25,13 @@ export const CardSlider = styled('div', {
             },
 
             '@bp2': {
-                marginLeft: '100px'
+                margin: '0px 100px'
             },
             '@bp3': {
                 margin: '30px 100px',
             },
             '@bp4': {
-                marginLeft: '300px'
+                margin: '30px 300px'
             }
         },
     },

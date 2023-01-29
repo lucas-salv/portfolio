@@ -36,7 +36,7 @@ export default () => {
                 window.addEventListener('wheel', toggleMoveUpAnimationClass);
             } else {
                 myProjectsRef.current?.classList.remove(animationName);
-                document.querySelector('.test-float')?.classList.remove('displayed');
+                floatContainerSocialInfoRef.current?.classList.remove(floatContainerAnimationClass);;
                 window.removeEventListener('wheel', toggleMoveUpAnimationClass)
             }
         }

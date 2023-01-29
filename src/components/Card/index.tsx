@@ -1,3 +1,4 @@
+import { forwardRef, Ref } from "react";
 import { Card, CardContainerTitle, CardTitle } from "./styles";
 
 type cardProps = {
@@ -5,12 +6,12 @@ type cardProps = {
     backgroundUrl: string,
 }
 
-export default ({ title, backgroundUrl }:cardProps) => {
+export default forwardRef(({ title, backgroundUrl }:cardProps, ref: Ref<HTMLDivElement>) => {
     return (
-        <Card css={{ backgroundImage: `url(${backgroundUrl})`, backgroundRepeat: 'no-repeat', backgroundSize: '265% auto'}}>
+        <Card ref={ref} css={{ backgroundImage: `url(${backgroundUrl})`, backgroundRepeat: 'no-repeat', backgroundSize: '265% auto'}}>
             <CardContainerTitle>
                 <CardTitle>{title}</CardTitle>
             </CardContainerTitle>
         </Card>
     )
-}
+})
