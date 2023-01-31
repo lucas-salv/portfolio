@@ -2,6 +2,7 @@ import { ButtonHTMLAttributes, useRef, cloneElement, Ref, forwardRef } from "rea
 import { Button } from "./styles"
 import useTriggerAnimations from "@/utils/useTriggerAnimations"
 import mergeRefs from "@/utils/mergeRefs"
+import { CSS } from "@stitches/react"
 
 type buttonProps = {
     icon: JSX.Element,
@@ -9,6 +10,7 @@ type buttonProps = {
     target?: string,
     variant?: 'solid' | 'outline',
     size?: 'md' | 'lg',
+    css?: CSS
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 export default forwardRef(({ icon, variant = 'solid', size = 'md', href, target, ...props}:buttonProps, ref: Ref<HTMLButtonElement | HTMLAnchorElement>) => {
