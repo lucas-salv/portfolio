@@ -3,28 +3,20 @@ import { keyframes } from "@stitches/react";
 
 const fadeIn = keyframes({
     '0%': {
-        display: 'none',
-    },
-    '10%': {
-        display: 'flex',
-        opacity: 0
+        opacity: 0,
     },
     '100%': {
         opacity: 1
     }
-})
+});
 
 const fadeOut = keyframes({
     '0%': {
-        opacity: 1
-    },
-    '80%': {
-        display: 'flex',
-        opacity: 0
+        opacity: 1,
     },
     '100%': {
-        display: 'none',
-    },
+        opacity: 0
+    }
 })
 
 export const ModalContent = styled('div', {
@@ -41,41 +33,37 @@ export const ModalContent = styled('div', {
     }
 });
 
-export const ModalOverlay = styled('div', {
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'rgba(0,0,0,0)',
-    backdropFilter: 'blur(0) opacity(0)',
-    transition: 'all .2s'
-});
-
-export const Modal = styled('div', {
+export const Modal = styled('dialog', {
     position: 'fixed',
-    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
     height: '100%',
+    maxWidth: '100% !important',
+    maxHeight: '100% !important',
+    border: 'none',
+    background: 'transparent',
     zIndex: 7,
-    transition: 'opacity .5s',
 
-    variants: {
-        isOpen: {
-            true: {
-                [`& ${ModalContent}`]: {
-                    transform: 'scale(1, 1)',
-                },
-                [`& ${ModalOverlay}`]: {
-                    backdropFilter: 'blur(2px) opacity(1)',
-                    backgroundColor: 'rgba(0,0,0,0.2)',
-                }
-            },
-            false: {
-                [`& ${ModalContent}`]: {
-                    transform: 'scale(0, 0)',
-                }
-                
-            }
+    '&[closing]': {
+        display: 'flex',
+        pointerEvents: 'none',
+        inset: 0,
+        animation: `${fadeOut} .5s forwards !important`,
+
+        '&::backdrop': {
+
         }
+    },
+
+    '&[open]': {
+        display: 'flex',
+        animation: `${fadeIn} .5s forwards`,
+    },
+
+    '&::backdrop': {
+        backgroundColor: 'rgba(0,0,0,0.2)',
+        backdropFilter: 'blur(3px)',
     }
+
 });

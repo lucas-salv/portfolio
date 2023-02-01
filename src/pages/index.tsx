@@ -71,7 +71,7 @@ export default function Home() {
       </Head>
       <button onClick={() => setIsOpen(true)}>Abrir modal</button>
       <Header />
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}/>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} closeOnOverlayClick />
       <Main />
     </>
   )
