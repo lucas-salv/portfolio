@@ -52,7 +52,6 @@ export default ({ children, isOpen, onClose, closeOnOverlayClick }:modalProps)  
                     }}
                     css={{ position: 'absolute', top: 20, right: 20, '@bp2': {top: -20, right: -20}}}
                 />
-                teste
                 {children}
             </ModalContent>
         </Modal>

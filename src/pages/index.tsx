@@ -4,6 +4,7 @@ import Header from '@/layout/Header'
 import Main from '@/layout/Main'
 import { useEffect, useState } from 'react'
 import Modal from '@/components/Modal'
+import Gallery from '@/components/Gallery'
 
 const globalStyles = globalCss({
   '*': {
@@ -71,7 +72,9 @@ export default function Home() {
       </Head>
       <button onClick={() => setIsOpen(true)}>Abrir modal</button>
       <Header />
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} closeOnOverlayClick />
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} closeOnOverlayClick >
+        <Gallery />
+      </Modal>
       <Main />
     </>
   )
