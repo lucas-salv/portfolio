@@ -54,8 +54,8 @@ export const ModalContent = styled('div', {
     transition: 'transform .2s',
     
     '@bp2': {
-        width: '500px',
-        height: '250px',
+        width: 'auto',
+        height: 'auto',
         transform: 'scale(0.5, 0.5)',
         boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)',
     }
