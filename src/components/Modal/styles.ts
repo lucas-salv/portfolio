@@ -50,12 +50,13 @@ export const ModalContent = styled('div', {
     width: '100%',
     height: '100%',
     backgroundColor: '$secondaryColor',
-    padding: '$space$2',
+    padding: '80px $space$2 0 $space$2',
     transition: 'transform .2s',
     
     '@bp2': {
         width: 'auto',
         height: 'auto',
+        padding: '$space$2',
         transform: 'scale(0.5, 0.5)',
         boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)',
     }
