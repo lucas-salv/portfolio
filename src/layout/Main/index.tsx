@@ -1,15 +1,20 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Main, MyProjects, FloatContainerSocialInfo, Email, ContainerPhrase, Phrase, Author} from "./styles";
 import Info from "@/components/Info";
 import MySkills from "@/components/MySkills";
 import Card from "@/components/Card";
 import CardSlider from "@/components/CardSlider";
 import SocialMedia from "@/components/SocialMedia";
+import Modal from '@/components/Modal'
+import Gallery from '@/components/Gallery'
+import ModalInfo from '@/components/ModalInfo'
 
 export default () => {
     const myProjectsRef = useRef<HTMLDivElement>(null);
     const floatContainerSocialInfoRef = useRef<HTMLDivElement>(null);
     const containerPhraseRef = useRef<HTMLDivElement>(null);
+
+    const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
         const animationName = 'move-up';
@@ -60,8 +65,12 @@ export default () => {
                 </Email>
             </FloatContainerSocialInfo>
             <MyProjects ref={myProjectsRef}>
+            <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} closeOnOverlayClick >
+                <Gallery />
+                <ModalInfo />
+            </Modal>
                 <CardSlider title="Meus Projetos:">
-                    <Card title='Space Tourism' backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1634565177/Challenges/wudjsbv8g93aarlhvbud.jpg"/>
+                    <Card title='Space Tourism' onClick={() => setIsOpen(true)} backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1634565177/Challenges/wudjsbv8g93aarlhvbud.jpg"/>
                     <Card title='Sunnyside' backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1623250117/Challenges/lvj0udxz21q6bicxkysz.jpg"/>
                     <Card title='Audiophile' backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg"/>
                     <Card title='Sunnyside' backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1623250117/Challenges/lvj0udxz21q6bicxkysz.jpg"/>

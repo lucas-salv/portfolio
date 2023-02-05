@@ -3,9 +3,6 @@ import { globalCss } from '@stitches/react'
 import Header from '@/layout/Header'
 import Main from '@/layout/Main'
 import { useEffect, useState } from 'react'
-import Modal from '@/components/Modal'
-import Gallery from '@/components/Gallery'
-import ModalInfo from '@/components/ModalInfo'
 
 const globalStyles = globalCss({
   '*': {
@@ -41,7 +38,6 @@ const globalStyles = globalCss({
 
 export default function Home() {
   globalStyles();
-  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     function toggleScroll() {
@@ -71,12 +67,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <button onClick={() => setIsOpen(true)}>Abrir modal</button>
       <Header />
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} closeOnOverlayClick >
-        <Gallery />
-        <ModalInfo />
-      </Modal>
       <Main />
     </>
   )

@@ -66,9 +66,13 @@ export const ModalContent = styled('div', {
         flexDirection: 'row',
         width: '900px',
         height: 'auto',
-        paddingTop: '$space$2',
-        paddingBottom: '$space$2',
+        padding: '$space$3',
         gap: 20
+    },
+
+    '@bp4': {
+        width: '1024px',
+        gap: 40
     },
 
     '@bph0': {

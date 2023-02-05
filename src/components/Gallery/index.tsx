@@ -16,7 +16,7 @@ export default () => {
     const btnRightRef = useRef<HTMLButtonElement>(null);
     const imageSliderContainerRef = useRef<HTMLDivElement>(null);
 
-    const [imgActivated, setImgActivated] = useState('');
+    const [imgActivated, setImgActivated] = useState(testArr[0]);
 
     const onClickTest = (e:MouseEvent<HTMLDivElement>) => {
         if(imageSliderRef.current) {
@@ -34,8 +34,13 @@ export default () => {
     }
 
     useEffect(() => {
+
         if(imageSliderRef.current) {
-            imageSliderRef.current.style.width = `${(125 * testArr.length) + 170}px`
+            const firstChild = [...imageSliderRef.current.children][0]
+            const firstChildSrc = firstChild.getAttribute('src');
+            imageSliderRef.current.style.width = `${(125 * testArr.length) + 170}px`;
+            firstChild.classList.add('activated');
+            if(firstChildSrc) setImgActivated(firstChildSrc);
         }
 
         function sliderToLeft() {

@@ -18,16 +18,20 @@ export const ModalInfo = styled('article', {
     },
 
     '@bp2': {
-        maxWidth: '530px'
+        maxWidth: '530px',
     },
     '@bp3': {
         width: '370px',
         height: '360px',
         marginTop: '0',
+    },
+    '@bp4': {
+        width: '100%',
     }
 });
 
 export const ModalInfoContainer = styled('div', {
+    paddingRight: '$space$1',
 });
 
 export const ModalInfoTitle = styled('h1', {
@@ -54,15 +58,22 @@ export const ModalInfoButtons = styled('div', {
     left: 0,
     right: 0,
     display: 'flex',
-    gap: 20,
     margin: '$space$2 0',
     padding: '0 $space$2',
     backgroundColor: '$secondaryColor',
     '@bp3': {
         position: 'fixed',
-        width: '350px',
+        flexDirection: 'column',
+        width: '270px',
+        padding: 0,
         left: 'inherit',
-        right: 0,
+        right: 40,
+        bottom: 20
+    },
+    '@bp4': {
+        flexDirection: 'row',
+        gap: '$space$2',
+        minWidth: '374px'
     },
     '@bp0': {
         flexDirection: 'column',
