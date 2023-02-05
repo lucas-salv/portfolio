@@ -4,10 +4,12 @@ export const Gallery = styled('div', {
 });
 
 export const MainImageContainer = styled('div', {
+    display: 'flex',
     width: '100%',
     height: '260px',
-    backgroundColor: 'lightgray',
+    backgroundColor: '$primaryColor',
     marginBottom: '10px',
+    overflow: 'hidden',
 
     '@bp2': {
         width: '530px',
@@ -15,7 +17,15 @@ export const MainImageContainer = styled('div', {
     },
 });
 
-export const MainImage = styled('img', {});
+export const MainImage = styled('img', {
+    width: 'auto',
+    height: '100%',
+    margin: '0 auto',
+
+    '@bp2': {
+        width: '100%',
+    },
+});
 
 export const ImageSliderContainer = styled('div', {
     position: 'relative',
@@ -57,7 +67,7 @@ export const ImageSlider = styled('div', {
     gap: '10px',
 });
 
-export const Test = styled('div', {
+export const Test = styled('img', {
     minWidth: '125px',
     height: '75px',
     backgroundColor: 'lightgray',

@@ -1,14 +1,22 @@
-import { useEffect, useRef, MouseEvent } from 'react'
+import { useEffect, useRef, MouseEvent, useState } from 'react'
 import { Gallery, MainImageContainer, MainImage, ImageSliderContainer, ImageSliderSubContainer, ImageSlider, ImageSliderButton, Test } from "./styles"
 import { HiOutlineChevronLeft, HiOutlineChevronRight }  from 'react-icons/hi';
 
-const testArr = [1,2,3,4,5,6,7,8]
+const testArr = [
+    'https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/1462725/pexels-photo-1462725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+]
 
 export default () => {
     const imageSliderRef = useRef<HTMLDivElement>(null);
     const btnLeftRef = useRef<HTMLButtonElement>(null);
     const btnRightRef = useRef<HTMLButtonElement>(null);
     const imageSliderContainerRef = useRef<HTMLDivElement>(null);
+
+    const [imgActivated, setImgActivated] = useState('');
 
     const onClickTest = (e:MouseEvent<HTMLDivElement>) => {
         if(imageSliderRef.current) {
@@ -18,6 +26,10 @@ export default () => {
                 el.classList.remove('activated')
             });
             target.classList.add('activated');
+            const srcImg = target.getAttribute('src')
+            if(srcImg)  {
+                setImgActivated(srcImg)
+            }
         }
     }
 
@@ -50,7 +62,7 @@ export default () => {
     return (
         <Gallery>
             <MainImageContainer>
-                <MainImage />
+                <MainImage src={imgActivated} />
             </MainImageContainer>
             <ImageSliderContainer>
                 <ImageSliderButton className='left' ref={btnLeftRef}>
@@ -59,7 +71,7 @@ export default () => {
                 <ImageSliderSubContainer ref={imageSliderContainerRef}>
                     <ImageSlider ref={imageSliderRef}>
                         {testArr.map((el, index) => (
-                            <Test onClick={(e) => onClickTest(e)}/>
+                            <Test src={el} key={index} onClick={(e) => onClickTest(e)}/>
                         ))}
                     </ImageSlider>
                 </ImageSliderSubContainer>
