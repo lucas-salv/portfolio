@@ -36,6 +36,14 @@ export const Button = styled('button', {
     },
 
     variants: {
+        fullWidth: {
+            true: {
+                display: 'flex',
+                width: '100%',
+                justifyContent: 'center',
+            },
+            false: {}
+        },
         variant: {
             'solid': {
                 backgroundColor: '$primaryColor',

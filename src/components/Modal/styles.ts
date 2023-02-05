@@ -47,6 +47,8 @@ const scaleOut = keyframes({
 
 export const ModalContent = styled('div', {
     position: 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
     width: '100%',
     height: '100%',
     backgroundColor: '$secondaryColor',
@@ -55,10 +57,28 @@ export const ModalContent = styled('div', {
     
     '@bp2': {
         width: 'auto',
-        height: 'auto',
-        padding: '$space$2',
+        height: '100%',
         transform: 'scale(0.5, 0.5)',
         boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)',
+    },
+
+    '@bp3': {
+        flexDirection: 'row',
+        width: '900px',
+        height: 'auto',
+        paddingTop: '$space$2',
+        paddingBottom: '$space$2',
+        gap: 20
+    },
+
+    '@bph0': {
+        height: '100%',
+        overflowY: 'auto'
+    },
+
+    '@bph4': {
+        height: '100%',
+        overflowY: 'auto'
     }
 });
 
@@ -72,6 +92,7 @@ export const Modal = styled('dialog', {
     maxHeight: '100% !important',
     border: 'none',
     background: 'transparent',
+    overflow: 'hidden',
     zIndex: 7,
 
     '&[closing]': {

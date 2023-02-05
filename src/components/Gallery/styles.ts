@@ -1,6 +1,7 @@
 import { styled } from "@/helpers/stitches.config";
 
-export const Gallery = styled('div', {});
+export const Gallery = styled('div', {
+});
 
 export const MainImageContainer = styled('div', {
     width: '100%',
@@ -9,8 +10,9 @@ export const MainImageContainer = styled('div', {
     marginBottom: '10px',
 
     '@bp2': {
-        width: '530px'
-    }
+        width: '530px',
+        height: '350px'
+    },
 });
 
 export const MainImage = styled('img', {});
@@ -21,7 +23,7 @@ export const ImageSliderContainer = styled('div', {
 
     '@bp2': {
         width: '530px'
-    }
+    },
 });
 
 export const ImageSliderButton = styled('button', {

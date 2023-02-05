@@ -50,7 +50,7 @@ export default ({ children, isOpen, onClose, closeOnOverlayClick }:modalProps)  
                         closeModal()
                         if(onClose) onClose()
                     }}
-                    css={{ position: 'absolute', top: 20, right: 20, '@bp2': {top: -20, right: -20}}}
+                    css={{ position: 'absolute', top: 20, right: 20, '@bp3': {top: -20, right: -20, zIndex: 5}}}
                 />
                 {children}
             </ModalContent>
