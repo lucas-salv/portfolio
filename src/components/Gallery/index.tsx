@@ -40,7 +40,11 @@ export default ({ images }:galleryProps) => {
     useEffect(() => {
         if(imageSliderRef.current) {
             const firstChild = [...imageSliderRef.current.children][0]
+            const children = [...imageSliderRef.current.children];
             const firstChildSrc = firstChild.getAttribute('src');
+            children.forEach(el => {
+                el.classList.remove('activated')
+            });
             imageSliderRef.current.style.width = `${(125 * testArr.length) + 170}px`;
             firstChild.classList.add('activated');
             if(firstChildSrc) setImgActivated(firstChildSrc);
@@ -65,7 +69,7 @@ export default ({ images }:galleryProps) => {
             btnLeftRef.current?.removeEventListener('click', sliderToLeft);
             btnRightRef.current?.removeEventListener('click', sliderToRight);
         }
-    }, [])
+    }, [images])
 
     return (
         <Gallery>
