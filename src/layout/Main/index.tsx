@@ -9,12 +9,16 @@ import Modal from '@/components/Modal'
 import Gallery from '@/components/Gallery'
 import ModalInfo from '@/components/ModalInfo'
 
+import * as data from './../../helpers/database.json';
+import projectType from "@/utils/projectInfoType";
+
 export default () => {
     const myProjectsRef = useRef<HTMLDivElement>(null);
     const floatContainerSocialInfoRef = useRef<HTMLDivElement>(null);
     const containerPhraseRef = useRef<HTMLDivElement>(null);
 
     const [isOpen, setIsOpen] = useState(false)
+    const [cardActivated, setCardActivated] = useState<projectType>()
 
     useEffect(() => {
         const animationName = 'move-up';
@@ -66,17 +70,26 @@ export default () => {
             </FloatContainerSocialInfo>
             <MyProjects ref={myProjectsRef}>
             <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} closeOnOverlayClick >
-                <Gallery />
-                <ModalInfo />
+                {cardActivated ? 
+                    <>
+                        <Gallery images={cardActivated.photos} />
+                        <ModalInfo infos={cardActivated} />
+                    </>
+                    :
+                    <></>
+                }
             </Modal>
                 <CardSlider title="Meus Projetos:">
-                    <Card title='Space Tourism' onClick={() => setIsOpen(true)} backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1634565177/Challenges/wudjsbv8g93aarlhvbud.jpg"/>
-                    <Card title='Sunnyside' backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1623250117/Challenges/lvj0udxz21q6bicxkysz.jpg"/>
-                    <Card title='Audiophile' backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg"/>
-                    <Card title='Sunnyside' backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1623250117/Challenges/lvj0udxz21q6bicxkysz.jpg"/>
-                    <Card title='Audiophile' backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg"/>
-                    <Card title='Sunnyside' backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1623250117/Challenges/lvj0udxz21q6bicxkysz.jpg"/>
-                    <Card title='Audiophile' backgroundUrl="https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg"/>
+                    {data.projects?.map((item, index) => (
+                        <Card
+                            key={index}
+                            title={item.name}
+                            onClick={() => {
+                                setIsOpen(true);
+                                setCardActivated(item)
+                            }}
+                            backgroundUrl={item.background_image_url}/>
+                    ))}
                 </CardSlider>
                 <ContainerPhrase ref={containerPhraseRef}>
                     <Phrase>"Cada sonho que você deixa pra trás, é um pedaço do seu futuro que deixa de existir."</Phrase>

@@ -10,7 +10,11 @@ const testArr = [
     'https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 ]
 
-export default () => {
+type galleryProps = {
+    images: string[]
+}
+
+export default ({ images }:galleryProps) => {
     const imageSliderRef = useRef<HTMLDivElement>(null);
     const btnLeftRef = useRef<HTMLButtonElement>(null);
     const btnRightRef = useRef<HTMLButtonElement>(null);
@@ -34,7 +38,6 @@ export default () => {
     }
 
     useEffect(() => {
-
         if(imageSliderRef.current) {
             const firstChild = [...imageSliderRef.current.children][0]
             const firstChildSrc = firstChild.getAttribute('src');
@@ -75,7 +78,7 @@ export default () => {
                 </ImageSliderButton>
                 <ImageSliderSubContainer ref={imageSliderContainerRef}>
                     <ImageSlider ref={imageSliderRef}>
-                        {testArr.map((el, index) => (
+                        {images.map((el, index) => (
                             <Test src={el} key={index} onClick={(e) => onClickTest(e)}/>
                         ))}
                     </ImageSlider>

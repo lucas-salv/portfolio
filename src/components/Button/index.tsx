@@ -10,7 +10,7 @@ type buttonProps = {
     fullWidth?: boolean
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-export default ({ label, variant = 'solid', href, target, fullWidth, ...props}:buttonProps) => {
+export default ({ label, variant = 'solid', href, target="_blank", fullWidth, ...props}:buttonProps) => {
     const btnRefAsLink = useRef<HTMLAnchorElement>(null);
     const btnRef = useRef<HTMLButtonElement>(null);
     useTriggerAnimations('pulse-animation', 'mousedown', href ? btnRefAsLink : btnRef);
