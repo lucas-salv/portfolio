@@ -31,6 +31,7 @@ export const MySkillsList = styled('div', {
     display: 'flex',
     justifyContent: 'space-between',
     margin: '20px',
+    gap: 5,
 
     '@bp2': {
         margin: '20px 100px'
