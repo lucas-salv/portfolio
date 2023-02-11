@@ -24,7 +24,21 @@ export default ({ children, title }:cardSliderProps) => {
 
         if(containerRef.current?.scrollLeft == 0) {
             btnPreviousRef.current?.setAttribute('disabled', 'true');
+            if((containerRef.current.scrollWidth - containerRef.current.clientWidth) == 0) {
+                btnNextRef.current?.setAttribute('disabled', 'true');
+            }
         }
+
+        window.addEventListener('resize', () => {
+            if(containerRef.current) {
+                if((containerRef.current.scrollWidth - containerRef.current.clientWidth) == 0) {
+                    btnPreviousRef.current?.setAttribute('disabled', 'true');
+                    btnNextRef.current?.setAttribute('disabled', 'true');
+                } else {
+                    btnNextRef.current?.removeAttribute('disabled');
+                }
+            }
+        })
 
         
         btnNextRef.current?.addEventListener('click', () => {
