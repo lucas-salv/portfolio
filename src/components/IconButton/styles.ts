@@ -15,9 +15,17 @@ export const Button = styled('button', {
     alignItems: 'center',
     border: 'none',
     cursor: 'pointer',
-    transition: 'transform .1s ease-in-out',
+    transition: 'all .1s ease-in-out',
     position: 'relative',
     textDecoration: 'none',
+
+    '&[disabled]': {
+        opacity: '0.2',
+        cursor: 'not-allowed',
+        '&:hover': {
+            transform: 'scale(1,1)'
+        }
+    },
 
     '&::after': {
         content: '',

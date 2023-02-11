@@ -20,13 +20,18 @@ export default ({ children, title }:cardSliderProps) => {
             if(childRef.current) {
                 sliderRef.current.style.width = `${(childRef.current.offsetWidth * Children.toArray(children).length + 120)}px`
             }
+        };
+
+        if(containerRef.current?.scrollLeft == 0) {
+            btnPreviousRef.current?.setAttribute('disabled', 'true');
         }
 
         
         btnNextRef.current?.addEventListener('click', () => {
+            btnPreviousRef.current?.removeAttribute('disabled');
             if(containerRef.current){
                 if(childRef.current) {
-                    console.log((containerRef.current.scrollWidth - containerRef.current.clientWidth), containerRef.current.clientWidth)
+                    console.log(containerRef.current.scrollLeft)
                     if((containerRef.current.scrollWidth - containerRef.current.clientWidth) < containerRef.current.clientWidth / 2) {
                         containerRef.current.scrollLeft += (containerRef.current.scrollWidth - containerRef.current.clientWidth);
                     } else if((containerRef.current.scrollWidth - containerRef.current.clientWidth) > containerRef.current.clientWidth) {
@@ -34,11 +39,22 @@ export default ({ children, title }:cardSliderProps) => {
                     } else {
                         containerRef.current.scrollLeft += (containerRef.current.scrollWidth - containerRef.current.clientWidth) / 2;
                     }
+
+                    setTimeout(() => {
+                        if(containerRef.current) {
+                            console.log(containerRef.current.scrollLeft)
+                            if((containerRef.current.scrollLeft + containerRef.current.clientWidth) == containerRef.current.scrollWidth) {
+                                btnNextRef.current?.setAttribute('disabled', 'true');
+                                return
+                            }
+                        }
+                    }, 400)
                 }
             }
         });
         
         btnPreviousRef.current?.addEventListener('click', () => {
+            btnNextRef.current?.removeAttribute('disabled');
             if(containerRef.current){
                 if(childRef.current) {
                     if((containerRef.current.scrollWidth - containerRef.current.clientWidth) < containerRef.current.clientWidth / 2) {
@@ -49,6 +65,16 @@ export default ({ children, title }:cardSliderProps) => {
                         containerRef.current.scrollLeft -= (containerRef.current.scrollWidth - containerRef.current.clientWidth) / 2;
                     }
                 }
+
+                setTimeout(() => {
+                    if(containerRef.current) {
+                        console.log(containerRef.current.scrollLeft)
+                        if(containerRef.current.scrollLeft == 0) {
+                            btnPreviousRef.current?.setAttribute('disabled', 'true');
+                            return
+                        }
+                    }
+                }, 400)
             }
         })
     }, [])
