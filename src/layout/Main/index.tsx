@@ -17,8 +17,8 @@ export default () => {
     const floatContainerSocialInfoRef = useRef<HTMLDivElement>(null);
     const containerPhraseRef = useRef<HTMLDivElement>(null);
 
-    const [isOpen, setIsOpen] = useState(false)
-    const [cardActivated, setCardActivated] = useState<projectType>()
+    const [isOpen, setIsOpen] = useState(false);
+    const [cardActivated, setCardActivated] = useState<projectType>();
 
     useEffect(() => {
         const animationName = 'move-up';
@@ -42,7 +42,12 @@ export default () => {
 
         function checksWindowHeightToEnableScrollEvent() {
             if(window.matchMedia("(min-height:570px)").matches) {
-                window.addEventListener('wheel', toggleMoveUpAnimationClass);
+                console.log(isOpen)
+                if(isOpen) {
+                    window.removeEventListener('wheel', toggleMoveUpAnimationClass);
+                } else {
+                    window.addEventListener('wheel', toggleMoveUpAnimationClass);
+                }
             } else {
                 myProjectsRef.current?.classList.remove(animationName);
                 floatContainerSocialInfoRef.current?.classList.remove(floatContainerAnimationClass);;
@@ -56,7 +61,7 @@ export default () => {
             window.removeEventListener('wheel', toggleMoveUpAnimationClass);
             window.removeEventListener('resize', checksWindowHeightToEnableScrollEvent)
         }
-      }, []);
+      }, [isOpen]);
 
     return (
         <Main>
