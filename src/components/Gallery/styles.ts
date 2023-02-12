@@ -23,7 +23,7 @@ export const MainImage = styled('img', {
     margin: '0 auto',
 
     '@bp2': {
-        width: '100%',
+        width: 'auto',
     },
 });
 

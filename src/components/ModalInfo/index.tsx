@@ -14,7 +14,7 @@ export default ({ infos }:modalInfoProps) => {
                     <ModalInfoContainer>
                         <ModalInfoTitle>{infos.name}</ModalInfoTitle>
                         <ModalInfoDesc>{infos.description}</ModalInfoDesc>
-                        <ModalInfoToolsTitle>Tecnologias:</ModalInfoToolsTitle>
+                        <ModalInfoToolsTitle>Tecnologias Usadas:</ModalInfoToolsTitle>
                         <ModalInfoTools>
                             {infos.tools.map((tool, index) => (
                                 <ModalInfoToolsItem key={index} >{tool}</ModalInfoToolsItem>

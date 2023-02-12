@@ -5,7 +5,7 @@ export const CardSlider = styled('div', {
     flexDirection: 'column',
 
     '& > .cardContainer': {
-        overflowX: 'scroll',
+        overflowX: 'auto',
         overflowY: 'hidden',
         scrollBehavior: 'smooth',
 
