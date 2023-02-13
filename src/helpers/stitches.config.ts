@@ -31,7 +31,7 @@ export const {
     bp2: '(min-width: 768px)',
     bp3: '(min-width: 1024px)',
     bp4: '(min-width: 1280px)',
-    //bp5: '(max-width: 768px)',
+    bpG: '(min-width: 530px)',
     bph0: '(max-height: 570px)',
     bph1: '(max-height: 650px)',
     bph2: '(min-height: 768px)',

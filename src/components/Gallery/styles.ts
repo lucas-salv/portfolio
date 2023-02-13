@@ -6,10 +6,14 @@ export const Gallery = styled('div', {
 export const MainImageContainer = styled('div', {
     display: 'flex',
     width: '100%',
-    height: '260px',
+    height: 'auto',
     backgroundColor: '$primaryColor',
     marginBottom: '10px',
     overflow: 'hidden',
+
+    '@bpG': {
+        height: '320px'
+    },
 
     '@bp2': {
         width: '530px',
@@ -18,11 +22,10 @@ export const MainImageContainer = styled('div', {
 });
 
 export const MainImage = styled('img', {
-    width: 'auto',
-    height: '100%',
+    width: '100%',
     margin: '0 auto',
 
-    '@bp2': {
+    '@bpG': {
         width: 'auto',
     },
 });
