@@ -18,7 +18,7 @@ export default ({ children, title }:cardSliderProps) => {
     useEffect(() => {
         if(sliderRef.current){
             if(childRef.current) {
-                sliderRef.current.style.width = `${(childRef.current.offsetWidth * Children.toArray(children).length + 100)}px`
+                sliderRef.current.style.width = `${(childRef.current.offsetWidth * Children.toArray(children).length + 120)}px`
             }
         };
 
@@ -62,7 +62,7 @@ export default ({ children, title }:cardSliderProps) => {
                                 return
                             }
                         }
-                    }, 400)
+                    }, 500)
                 }
             }
         });
@@ -83,12 +83,12 @@ export default ({ children, title }:cardSliderProps) => {
                 setTimeout(() => {
                     if(containerRef.current) {
                         console.log(containerRef.current.scrollLeft)
-                        if(containerRef.current.scrollLeft == 0) {
+                        if(containerRef.current.scrollLeft < 10) {
                             btnPreviousRef.current?.setAttribute('disabled', 'true');
                             return
                         }
                     }
-                }, 400)
+                }, 500)
             }
         })
     }, [])
