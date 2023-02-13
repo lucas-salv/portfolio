@@ -2,24 +2,39 @@
     "projects": [
         {
             "id": 1,
-            "name": "Shortly",
-            "description": "O Shortly tem como objetivo facilitar tanto o uso como o compartilhamento de links longos, encurtando-os de forma rápida e fácil. Esse projeto é um desafio feito por frontendmentor.io",
-            "tools": ["ReactJS", "Typescript", "Styled-components", "Axios"],
-            "links": { "repo_url": "https://github.com/lucas-salv/shortly", "website_url": "#" },
-            "background_image_url": "https://camo.githubusercontent.com/f4781fa9a66633acd9e79a50727cd227e9186102643b6ce8d1686b90b1622863/68747470733a2f2f692e6962622e636f2f775251795a42542f6465736b746f702e706e67",
+            "name": "Space Tourism",
+            "description": "Space Tourism é uma página de uma empresa de turismo espacial fictícia. Tem por objetivo treinar as minhas habilidades com novas ferramentas front-end",
+            "tools": ["ReactJS", "Typescript", "chakraUI"],
+            "comingSoon": true,
+            "links": { "repo_url": "https://github.com/lucas-salv/space-tourism", "website_url": "" },
+            "background_image_url": "https://i.ibb.co/Brr0wCs/space-tourism.jpg",
             "photos": [
-                "https://camo.githubusercontent.com/f4781fa9a66633acd9e79a50727cd227e9186102643b6ce8d1686b90b1622863/68747470733a2f2f692e6962622e636f2f775251795a42542f6465736b746f702e706e67",
-                "https://camo.githubusercontent.com/fd535de3aa9d907f798a56e2a4f2bd2ccc33233d481875e8c5c15bd61807fb85/68747470733a2f2f692e6962622e636f2f674a463552514b2f6d6f62696c652e706e67",
-                "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/1462725/pexels-photo-1462725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                "https://i.ibb.co/Brr0wCs/space-tourism.jpg",
+                "https://i.ibb.co/RBzGgd3/space-tourism-destination.jpg",
+                "https://i.ibb.co/GnTbs1N/space-tourism-crew.jpg",
+                "https://i.ibb.co/8rK3VxM/space-tourism-tech.jpg",
+                "https://i.ibb.co/DLDCRfm/space-tourism-mobile.jpg"
             ]
         },
         {
             "id": 2,
+            "name": "Shortly",
+            "description": "O Shortly tem como objetivo facilitar tanto o uso como o compartilhamento de links longos, encurtando-os de forma rápida e fácil. Esse projeto é um desafio feito por frontendmentor.io",
+            "comingSoon": false,
+            "tools": ["ReactJS", "Typescript", "Styled-components", "Axios"],
+            "links": { "repo_url": "https://github.com/lucas-salv/shortly", "website_url": "" },
+            "background_image_url": "https://i.ibb.co/Hp7dqcW/shortly-desktop.jpg",
+            "photos": [
+                "https://i.ibb.co/Hp7dqcW/shortly-desktop.jpg",
+                "https://i.ibb.co/gJF5RQK/mobile.png"
+            ]
+        },
+        {
+            "id": 3,
             "name": "To-Do App",
             "description": "O todo-app é um aplicativo de lista de tarefas, de coisas que precisam ser feitas. É uma forma de organizar as atividades que não podem ser esquecidas, e que não estão inseridas na nossa rotina. É diferente de uma agenda, onde as atividades tem dia e hora para acontecer.",
             "tools": ["ReactJS", "Styled-components", "NodeJS", "SocketIO", "Axios"],
+            "comingSoon": false,
             "links": { "repo_url": "github.com/lucas-salv/todo-app", "website_url": "#" },
             "background_image_url": "https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg",
             "photos": [
@@ -31,10 +46,11 @@
             ]
         },
         {
-            "id": 3,
+            "id": 4,
             "name": "AnonimoChat",
             "description": "Um app de bate papo em tempo real feito em React Native. A idéia é conectar duas pessoas aleatórias a conversarem de forma anônima.",
             "tools": ["React Native", "Styled-components", "NodeJS", "SocketIO", "Axios", "Expo", "localtunnel"],
+            "comingSoon": false,
             "links": { "repo_url": "github.com/lucas-salv/anonimochat", "website_url": "#" },
             "background_image_url": "https://res.cloudinary.com/dz209s6jk/image/upload/v1623250117/Challenges/lvj0udxz21q6bicxkysz.jpg",
             "photos": [
@@ -46,10 +62,11 @@
             ]
         },
         {
-            "id": 4,
+            "id": 5,
             "name": "Rest Countries App",
             "description": "O rest-countries-app é uma interface para a api do https://restcountries.com, trazendo assim informações básicas sobre os países. Esse projeto é um desafio feito pela plataforma https://frontendmentor.io",
             "tools": ["NextJS", "Styled-components", "Axios"],
+            "comingSoon": false,
             "links": { "repo_url": "github.com/lucas-salv/rest-countries-api", "website_url": "#" },
             "background_image_url": "https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg",
             "photos": [
@@ -61,10 +78,11 @@
             ]
         },
         {
-            "id": 5,
+            "id": 6,
             "name": "Pokédex",
             "description": "A Pokédex, é uma enciclopédia virtual portátil que registra todas as espécies diferentes de Pokémon, listando informações úteis sobre tal. OBS.: A api utilizada nesse projeto foi a https://pokeapi.co",
             "tools": ["React Native", "Styled-components", "Expo", "Axios"],
+            "comingSoon": false,
             "links": { "repo_url": "github.com/lucas-salv/pokedex-in-react-native", "website_url": "#" },
             "background_image_url": "https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg",
             "photos": [
@@ -76,10 +94,11 @@
             ]
         },
         {
-            "id": 6,
+            "id": 7,
             "name": "DevFinder",
             "description": "O dev-finder é uma interface para a api do github, trazendo informações básicas sobre o usuário.",
             "tools": ["ReactJS", "Sass", "Axios"],
+            "comingSoon": false,
             "links": { "repo_url": "github.com/lucas-salv/devfinder", "website_url": "#" },
             "background_image_url": "https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg",
             "photos": [

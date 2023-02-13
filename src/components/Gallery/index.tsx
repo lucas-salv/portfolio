@@ -2,14 +2,6 @@ import { useEffect, useRef, MouseEvent, useState } from 'react'
 import { Gallery, MainImageContainer, MainImage, ImageSliderContainer, ImageSliderSubContainer, ImageSlider, ImageSliderButton, Test } from "./styles"
 import { HiOutlineChevronLeft, HiOutlineChevronRight }  from 'react-icons/hi';
 
-const testArr = [
-    'https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'https://images.pexels.com/photos/1462725/pexels-photo-1462725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    'https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-]
-
 type galleryProps = {
     images: string[]
 }
@@ -20,7 +12,7 @@ export default ({ images }:galleryProps) => {
     const btnRightRef = useRef<HTMLButtonElement>(null);
     const imageSliderContainerRef = useRef<HTMLDivElement>(null);
 
-    const [imgActivated, setImgActivated] = useState(testArr[0]);
+    const [imgActivated, setImgActivated] = useState(images[0]);
 
     const onClickTest = (e:MouseEvent<HTMLDivElement>) => {
         if(imageSliderRef.current) {
@@ -45,7 +37,7 @@ export default ({ images }:galleryProps) => {
             children.forEach(el => {
                 el.classList.remove('activated')
             });
-            imageSliderRef.current.style.width = `${(125 * testArr.length) + 170}px`;
+            imageSliderRef.current.style.width = `${(125 * images.length) + 50}px`;
             firstChild.classList.add('activated');
             if(firstChildSrc) setImgActivated(firstChildSrc);
         }

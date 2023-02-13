@@ -19,6 +19,14 @@ export const Button = styled('button', {
     textDecoration: 'none',
     transition: 'transform .2s ease-in-out',
 
+    '&[disabled]': {
+        opacity: '0.2',
+        cursor: 'not-allowed',
+        '&:hover': {
+            transform: 'scale(1,1)'
+        }
+    },
+
     '&::after': {
         content: '',
         display: 'inline-block',

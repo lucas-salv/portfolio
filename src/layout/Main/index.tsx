@@ -89,6 +89,7 @@ export default () => {
                         <Card
                             key={index}
                             title={item.name}
+                            comingSoon={item.comingSoon}
                             onClick={() => {
                                 setIsOpen(true);
                                 setCardActivated(item)

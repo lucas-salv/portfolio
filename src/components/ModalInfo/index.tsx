@@ -22,7 +22,11 @@ export default ({ infos }:modalInfoProps) => {
                         </ModalInfoTools>
                     </ModalInfoContainer>
                     <ModalInfoButtons>
-                        <Button label="Demostração" href={infos.links.website_url} fullWidth/>
+                        {infos.links.website_url.length > 0 ? 
+                            <Button label="Demostração" href={infos.links.website_url} fullWidth/>
+                        :
+                            <Button label="Demostração" href={infos.links.website_url} fullWidth disabled/>
+                        }
                         <Button label="Repositório" href={infos.links.repo_url} variant="outline" fullWidth/>
                     </ModalInfoButtons>
                 </>

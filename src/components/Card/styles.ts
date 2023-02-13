@@ -37,3 +37,13 @@ export const CardTitle = styled('h1', {
     fontSize: '$sizes$4',
     color: '$secondaryColor'
 });
+
+export const ComingSoon = styled('p', {
+    display: 'inline',
+    alignSelf: 'flex-start',
+    fontSize: '12px',
+    marginBottom: '$space$1',
+    color: '$secondaryColor',
+    padding: '2px $space$1',
+    border: '1px solid $secondaryColor'
+})

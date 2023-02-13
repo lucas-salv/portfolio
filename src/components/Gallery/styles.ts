@@ -63,7 +63,7 @@ export const ImageSliderSubContainer = styled('div', {
 
 export const ImageSlider = styled('div', {
     display: 'flex',
-    justifyContent: 'center',
+    margin: '0 50px',
     gap: '10px',
 });
 

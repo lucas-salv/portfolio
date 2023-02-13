@@ -18,7 +18,7 @@ export default ({ children, title }:cardSliderProps) => {
     useEffect(() => {
         if(sliderRef.current){
             if(childRef.current) {
-                sliderRef.current.style.width = `${(childRef.current.offsetWidth * Children.toArray(children).length + 120)}px`
+                sliderRef.current.style.width = `${(childRef.current.offsetWidth * Children.toArray(children).length + 100)}px`
             }
         };
 
