@@ -5,7 +5,9 @@ export default () => {
     return (
         <Container>
             <ContainerText>
-                <MainText>Sou desenvolvedor Front-End apaixonado por inovação, sempre em busca de colaborar e afixionado por resolver problemas.</MainText>
+                <MainText>
+                    Sou desenvolvedor Front-End apaixonado por inovação, criação de aplicações web/mobile e experiências interativas.
+                </MainText>
                 <Text>Para saber mais sobre mim acesse as redes abaixo ou me mande uma
                 mensagem no e-mail <strong>salv.dev.br@gmail.com</strong></Text>
             </ContainerText>

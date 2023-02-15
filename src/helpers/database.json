@@ -35,14 +35,16 @@
             "description": "O todo-app é um aplicativo de lista de tarefas, de coisas que precisam ser feitas. É uma forma de organizar as atividades que não podem ser esquecidas, e que não estão inseridas na nossa rotina. É diferente de uma agenda, onde as atividades tem dia e hora para acontecer.",
             "tools": ["ReactJS", "Styled-components", "NodeJS", "SocketIO", "Axios"],
             "comingSoon": false,
-            "links": { "repo_url": "github.com/lucas-salv/todo-app", "website_url": "#" },
-            "background_image_url": "https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg",
+            "links": { "repo_url": "github.com/lucas-salv/todo-app", "website_url": "" },
+            "background_image_url": "https://i.ibb.co/pPpHZM6/todo-app.jpg",
             "photos": [
-                "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt6ae30a464472c1e4/60da7b95a37ada0f2ccb4a65/5742a7632fb41cb6955bd0e49681fe6a1942e685.jpg",
-                "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/1462725/pexels-photo-1462725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                "https://i.ibb.co/Dz0sd9h/todo-app-login.jpg",
+                "https://i.ibb.co/pPpHZM6/todo-app.jpg",
+                "https://i.ibb.co/580WDS1/todo-app-edit-task.jpg",
+                "https://i.ibb.co/KLKCTHQ/todo-app-edit-user.jpg",
+                "https://i.ibb.co/mDxvnpT/todo-app-dark-theme.jpg",
+                "https://i.ibb.co/xz9Chys/todo-app-create-account.jpg",
+                "https://i.ibb.co/Jt55ytY/todo-app-mobile.jpg"
             ]
         },
         {
@@ -51,30 +53,32 @@
             "description": "Um app de bate papo em tempo real feito em React Native. A idéia é conectar duas pessoas aleatórias a conversarem de forma anônima.",
             "tools": ["React Native", "Styled-components", "NodeJS", "SocketIO", "Axios", "Expo", "localtunnel"],
             "comingSoon": false,
-            "links": { "repo_url": "github.com/lucas-salv/anonimochat", "website_url": "#" },
-            "background_image_url": "https://res.cloudinary.com/dz209s6jk/image/upload/v1623250117/Challenges/lvj0udxz21q6bicxkysz.jpg",
+            "links": { "repo_url": "github.com/lucas-salv/anonimochat", "website_url": "" },
+            "background_image_url": "https://i.ibb.co/8YdZHCc/anonimo-chat.jpg",
             "photos": [
-                "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/1462725/pexels-photo-1462725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                "https://i.ibb.co/1XMfhwx/anonimo-chat-main.jpg",
+                "https://i.ibb.co/qBYy2LV/anonimo-chat-chat.jpg",
+                "https://i.ibb.co/0fhSP48/anonimo-chat-chat-light.jpg",
+                "https://i.ibb.co/8ct76YL/anonimo-chat-fila.jpg"
             ]
         },
+        
+
+
+
         {
             "id": 5,
             "name": "Rest Countries App",
             "description": "O rest-countries-app é uma interface para a api do https://restcountries.com, trazendo assim informações básicas sobre os países. Esse projeto é um desafio feito pela plataforma https://frontendmentor.io",
             "tools": ["NextJS", "Styled-components", "Axios"],
             "comingSoon": false,
-            "links": { "repo_url": "github.com/lucas-salv/rest-countries-api", "website_url": "#" },
-            "background_image_url": "https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg",
+            "links": { "repo_url": "github.com/lucas-salv/rest-countries-api", "website_url": "" },
+            "background_image_url": "https://i.ibb.co/sFQ7CQG/rest-country.jpg",
             "photos": [
-                "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/1462725/pexels-photo-1462725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                "https://i.ibb.co/sFQ7CQG/rest-country.jpg",
+                "https://i.ibb.co/QnGnKCv/rest-country-dark-theme.jpg",
+                "https://i.ibb.co/tJtK8Nq/rest-country-info.jpg",
+                "https://i.ibb.co/9rSFcR0/rest-country-mobile.jpg"
             ]
         },
         {
@@ -83,14 +87,12 @@
             "description": "A Pokédex, é uma enciclopédia virtual portátil que registra todas as espécies diferentes de Pokémon, listando informações úteis sobre tal. OBS.: A api utilizada nesse projeto foi a https://pokeapi.co",
             "tools": ["React Native", "Styled-components", "Expo", "Axios"],
             "comingSoon": false,
-            "links": { "repo_url": "github.com/lucas-salv/pokedex-in-react-native", "website_url": "#" },
-            "background_image_url": "https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg",
+            "links": { "repo_url": "github.com/lucas-salv/pokedex-in-react-native", "website_url": "" },
+            "background_image_url": "https://i.ibb.co/hBW0GvM/pokedex.jpg",
             "photos": [
-                "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/1462725/pexels-photo-1462725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                "https://i.ibb.co/Y3KX98G/pokedex-main.jpg",
+                "https://i.ibb.co/2nX4nyz/pokedex-pokemon-front-back.jpg",
+                "https://i.ibb.co/Hg9WvJc/pokedex-pokemon2-front-back.jpg"
             ]
         },
         {
@@ -99,14 +101,12 @@
             "description": "O dev-finder é uma interface para a api do github, trazendo informações básicas sobre o usuário.",
             "tools": ["ReactJS", "Sass", "Axios"],
             "comingSoon": false,
-            "links": { "repo_url": "github.com/lucas-salv/devfinder", "website_url": "#" },
-            "background_image_url": "https://res.cloudinary.com/dz209s6jk/image/upload/v1619786083/Challenges/swxkgbgbn1z5yixxqwjb.jpg",
+            "links": { "repo_url": "github.com/lucas-salv/devfinder", "website_url": "" },
+            "background_image_url": "https://i.ibb.co/N1qzpbD/devfinder.jpg",
             "photos": [
-                "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/1462725/pexels-photo-1462725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                "https://i.ibb.co/bKC7DvQ/devfinder-search.jpg",
+                "https://i.ibb.co/N1qzpbD/devfinder.jpg",
+                "https://i.ibb.co/S6d9qqW/devfinder-mobile.jpg"
             ]
         }
     ]

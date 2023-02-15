@@ -10,8 +10,8 @@ type socialMediaProps = {
 export default ({ size = 'md', variant = 'outline' }:socialMediaProps) => {
     return (
         <SocialMedia size={size}>
-            <IconButton icon={<FaLinkedinIn />} href="#" target="_blank" variant={variant} size={size} />
-            <IconButton icon={<FaGithub />} href="#" target="_blank" variant={variant} size={size} />
+            <IconButton icon={<FaLinkedinIn />} href="https://www.linkedin.com/in/lucas-salv" target="_blank" variant={variant} size={size} />
+            <IconButton icon={<FaGithub />} href="https://www.github.com/lucas-salv" target="_blank" variant={variant} size={size} />
         </SocialMedia>
     )
 }
