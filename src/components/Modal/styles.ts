@@ -86,7 +86,7 @@ export const ModalContent = styled('div', {
     }
 });
 
-export const Modal = styled('dialog', {
+export const ModalComponent = styled('dialog', {
     position: 'fixed',
     justifyContent: 'center',
     alignItems: 'center',

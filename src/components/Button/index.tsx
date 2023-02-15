@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, useRef } from "react"
-import { Button } from "./styles"
+import { Btn } from "./styles"
 import useTriggerAnimations from "@/utils/useTriggerAnimations"
 
 type buttonProps = {
@@ -10,14 +10,14 @@ type buttonProps = {
     fullWidth?: boolean
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-export default ({ label, variant = 'solid', href, target="_blank", fullWidth, ...props}:buttonProps) => {
+const Button = ({ label, variant = 'solid', href, target="_blank", fullWidth, ...props}:buttonProps) => {
     const btnRefAsLink = useRef<HTMLAnchorElement>(null);
     const btnRef = useRef<HTMLButtonElement>(null);
     useTriggerAnimations('pulse-animation', 'mousedown', href ? btnRefAsLink : btnRef);
 
     return (
         href ? (
-                <Button
+                <Btn
                     as="a"
                     ref={btnRefAsLink}
                     href={href}
@@ -26,18 +26,20 @@ export default ({ label, variant = 'solid', href, target="_blank", fullWidth, ..
                     fullWidth={fullWidth}
                 >
                         {label}
-                </Button>
+                </Btn>
         )
         :
         (
-            <Button 
+            <Btn 
                 {...props}
                 ref={btnRef}
                 variant={variant}
                 fullWidth={fullWidth}
             >
                     {label}
-            </Button>
+            </Btn>
         )
     )
 }
+
+export default Button;

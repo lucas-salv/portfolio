@@ -13,7 +13,7 @@ type buttonProps = {
     css?: CSS
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-export default forwardRef(({ icon, variant = 'solid', size = 'md', href, target, ...props}:buttonProps, ref: Ref<HTMLButtonElement | HTMLAnchorElement>) => {
+const IconButton = forwardRef(({ icon, variant = 'solid', size = 'md', href, target, ...props}:buttonProps, ref: Ref<HTMLButtonElement | HTMLAnchorElement>) => {
     const btnRefAsLink = useRef<HTMLAnchorElement>(null);
     const btnRef = useRef<HTMLButtonElement>(null);
     useTriggerAnimations('pulse-animation', 'mousedown', href ? btnRefAsLink : btnRef);
@@ -43,4 +43,7 @@ export default forwardRef(({ icon, variant = 'solid', size = 'md', href, target,
             </Button>
         )
     )
-})
+});
+
+IconButton.displayName = "icon-button";
+export default IconButton;

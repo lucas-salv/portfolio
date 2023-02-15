@@ -1,7 +1,7 @@
 import { Container, ContainerText, MainText, Text, ContainerSocialButtons } from "./styles"
 import SocialMedia from "../SocialMedia";
 
-export default () => {
+const Info = () => {
     return (
         <Container>
             <ContainerText>
@@ -17,3 +17,6 @@ export default () => {
         </Container>
     )
 }
+
+Info.displayName = "my-info"
+export default Info

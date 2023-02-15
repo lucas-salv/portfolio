@@ -1,5 +1,5 @@
 import { MouseEventHandler, PropsWithChildren, useEffect, useState, useRef, MouseEvent } from "react";
-import { Modal, ModalContent,} from "./styles";
+import { ModalComponent, ModalContent,} from "./styles";
 import IconButton from "../IconButton";
 import { IoClose } from 'react-icons/io5';
 
@@ -9,7 +9,7 @@ type modalProps = {
     closeOnOverlayClick?: boolean
 } & PropsWithChildren
 
-export default ({ children, isOpen, onClose, closeOnOverlayClick }:modalProps)  => {
+const Modal = ({ children, isOpen, onClose, closeOnOverlayClick }:modalProps)  => {
     const modalRef = useRef<HTMLDialogElement>(null);
     
     function closeModal() {
@@ -38,7 +38,7 @@ export default ({ children, isOpen, onClose, closeOnOverlayClick }:modalProps)  
     }, [isOpen])
 
     return (
-        <Modal 
+        <ModalComponent 
             ref={modalRef}
             onClick={(e) => closeModalOnOverlayClick(e)}
         >
@@ -54,6 +54,8 @@ export default ({ children, isOpen, onClose, closeOnOverlayClick }:modalProps)  
                 />
                 {children}
             </ModalContent>
-        </Modal>
+        </ModalComponent>
     )
-}
+};
+
+export default Modal;

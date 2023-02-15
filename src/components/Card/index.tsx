@@ -1,5 +1,5 @@
 import { forwardRef, MouseEventHandler, Ref } from "react";
-import { Card, CardContainerTitle, CardTitle, ComingSoon } from "./styles";
+import { CardComponent, CardContainerTitle, CardTitle, ComingSoon } from "./styles";
 
 type cardProps = {
     title: string,
@@ -8,13 +8,16 @@ type cardProps = {
     onClick?: MouseEventHandler<HTMLDivElement>
 }
 
-export default forwardRef(({ title, backgroundUrl, comingSoon, onClick }:cardProps, ref: Ref<HTMLDivElement>) => {
+const Card = forwardRef(({ title, backgroundUrl, comingSoon, onClick }:cardProps, ref: Ref<HTMLDivElement>) => {
     return (
-        <Card ref={ref} onClick={onClick} css={{ backgroundImage: `url(${backgroundUrl})`, backgroundRepeat: 'no-repeat', backgroundSize: '265% auto'}}>
+        <CardComponent ref={ref} onClick={onClick} css={{ backgroundImage: `url(${backgroundUrl})`, backgroundRepeat: 'no-repeat', backgroundSize: '265% auto'}}>
             <CardContainerTitle>
                 {comingSoon && <ComingSoon>Em Desenvolvimento</ComingSoon>}
                 <CardTitle>{title}</CardTitle>
             </CardContainerTitle>
-        </Card>
+        </CardComponent>
     )
-})
+});
+
+Card.displayName = "card"
+export default Card;

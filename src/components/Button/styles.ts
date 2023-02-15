@@ -9,7 +9,7 @@ const pulse = keyframes({
     }
 });
 
-export const Button = styled('button', {
+export const Btn = styled('button', {
     padding: '10px 30px',
     height: '40px',
     border: 'none',

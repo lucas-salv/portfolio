@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Main, MyProjects, FloatContainerSocialInfo, Email, ContainerPhrase, Phrase, Author} from "./styles";
+import { MainComponent, MyProjects, FloatContainerSocialInfo, Email, ContainerPhrase, Phrase, Author} from "./styles";
 import Info from "@/components/Info";
 import MySkills from "@/components/MySkills";
 import Card from "@/components/Card";
@@ -12,7 +12,7 @@ import ModalInfo from '@/components/ModalInfo'
 import * as data from './../../helpers/database.json';
 import projectType from "@/utils/projectInfoType";
 
-export default () => {
+const Main = () => {
     const myProjectsRef = useRef<HTMLDivElement>(null);
     const floatContainerSocialInfoRef = useRef<HTMLDivElement>(null);
     const containerPhraseRef = useRef<HTMLDivElement>(null);
@@ -64,7 +64,7 @@ export default () => {
       }, [isOpen]);
 
     return (
-        <Main>
+        <MainComponent>
             <Info />
             <MySkills />
             <FloatContainerSocialInfo ref={floatContainerSocialInfoRef}>
@@ -98,10 +98,13 @@ export default () => {
                     ))}
                 </CardSlider>
                 <ContainerPhrase ref={containerPhraseRef}>
-                    <Phrase>"Cada sonho que você deixa pra trás, é um pedaço do seu futuro que deixa de existir."</Phrase>
+                    <Phrase>&quot;Cada sonho que você deixa pra trás, é um pedaço do seu futuro que deixa de existir.&quot;</Phrase>
                     <Author>Steve Jobs.</Author>
                 </ContainerPhrase>
             </MyProjects>
-        </Main>
+        </MainComponent>
     )
-}
+};
+
+Main.displayName = "main";
+export default Main;

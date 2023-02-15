@@ -1,6 +1,6 @@
 import { styled } from "@/helpers/stitches.config"
 
-export const Header = styled('header', {
+export const HeaderComponent = styled('header', {
     position: 'fixed',
     display: 'flex',
     justifyContent: 'center',

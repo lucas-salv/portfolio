@@ -8,7 +8,7 @@ type cardSliderProps = {
     title?: string
 } & PropsWithChildren
 
-export default ({ children, title }:cardSliderProps) => {
+const CardSldr = ({ children, title }:cardSliderProps) => {
     const sliderRef = useRef<HTMLDivElement>(null);
     const btnPreviousRef = useRef<HTMLButtonElement>(null);
     const btnNextRef = useRef<HTMLButtonElement>(null);
@@ -112,3 +112,6 @@ export default ({ children, title }:cardSliderProps) => {
         </CardSlider>
     )
 }
+
+CardSldr.displayName = "card-slider"
+export default CardSldr;

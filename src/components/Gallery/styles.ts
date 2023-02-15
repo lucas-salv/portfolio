@@ -1,6 +1,6 @@
 import { styled } from "@/helpers/stitches.config";
 
-export const Gallery = styled('div', {
+export const GalleryComponent = styled('div', {
 });
 
 export const MainImageContainer = styled('div', {

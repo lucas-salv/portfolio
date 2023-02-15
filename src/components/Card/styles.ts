@@ -1,6 +1,6 @@
 import { styled } from "@/helpers/stitches.config";
 
-export const Card = styled('div', {
+export const CardComponent = styled('div', {
     position: 'relative',
     minWidth: '265px',
     width: '265px',

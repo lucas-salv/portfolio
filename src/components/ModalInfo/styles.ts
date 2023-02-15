@@ -1,6 +1,6 @@
 import { styled } from "@/helpers/stitches.config";
 
-export const ModalInfo = styled('article', {
+export const ModalInfoComponent = styled('article', {
     display: 'flex',
     flexDirection: 'column',
     marginTop: '$space$2',

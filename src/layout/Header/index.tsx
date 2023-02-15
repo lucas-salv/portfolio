@@ -1,10 +1,13 @@
-import { Header } from "./styles";
+import { HeaderComponent } from "./styles";
 import Logo from "@/components/Logo";
 
-export default () => {
+const Header = () => {
     return (
-        <Header>
+        <HeaderComponent>
             <Logo href="#" title="Lucas&sdot;Salvador" />
-        </Header>
+        </HeaderComponent>
     )
-}
+};
+
+Header.displayName = "header";
+export default Header;

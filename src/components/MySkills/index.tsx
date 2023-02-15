@@ -5,7 +5,7 @@ import { IoLogoSass } from 'react-icons/io';
 import { SiStyledcomponents, SiReact, SiRedux, SiNodedotjs, SiGraphql, SiFigma } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb'
 
-export default () => {
+const Skills = () => {
     return (
         <MySkills>
             <MySkillsTitle><span>Minhas Habilidades</span></MySkillsTitle>
@@ -24,4 +24,7 @@ export default () => {
             </MySkillsList>
         </MySkills>
     )
-}
+};
+
+Skills.displayName = "my-skills";
+export default Skills;

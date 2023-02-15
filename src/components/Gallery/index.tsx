@@ -1,12 +1,12 @@
 import { useEffect, useRef, MouseEvent, useState } from 'react'
-import { Gallery, MainImageContainer, MainImage, ImageSliderContainer, ImageSliderSubContainer, ImageSlider, ImageSliderButton, Test } from "./styles"
+import { GalleryComponent, MainImageContainer, MainImage, ImageSliderContainer, ImageSliderSubContainer, ImageSlider, ImageSliderButton, Test } from "./styles"
 import { HiOutlineChevronLeft, HiOutlineChevronRight }  from 'react-icons/hi';
 
 type galleryProps = {
     images: string[]
 }
 
-export default ({ images }:galleryProps) => {
+const Gallery = ({ images }:galleryProps) => {
     const imageSliderRef = useRef<HTMLDivElement>(null);
     const btnLeftRef = useRef<HTMLButtonElement>(null);
     const btnRightRef = useRef<HTMLButtonElement>(null);
@@ -64,7 +64,7 @@ export default ({ images }:galleryProps) => {
     }, [images])
 
     return (
-        <Gallery>
+        <GalleryComponent>
             <MainImageContainer>
                 <MainImage src={imgActivated} />
             </MainImageContainer>
@@ -83,6 +83,9 @@ export default ({ images }:galleryProps) => {
                     <HiOutlineChevronRight size="28"/>
                 </ImageSliderButton>
             </ImageSliderContainer>
-        </Gallery>
+        </GalleryComponent>
     )
 }
+
+Gallery.displayName = "gallery";
+export default Gallery;

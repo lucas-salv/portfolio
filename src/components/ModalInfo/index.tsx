@@ -1,4 +1,4 @@
-import { ModalInfo, ModalInfoContainer, ModalInfoTitle, ModalInfoDesc, ModalInfoToolsTitle, ModalInfoTools, ModalInfoToolsItem, ModalInfoButtons } from "./styles"
+import { ModalInfoComponent, ModalInfoContainer, ModalInfoTitle, ModalInfoDesc, ModalInfoToolsTitle, ModalInfoTools, ModalInfoToolsItem, ModalInfoButtons } from "./styles"
 import Button from "../Button"
 import projectType from "@/utils/projectInfoType"
 
@@ -6,9 +6,9 @@ type modalInfoProps = {
     infos?: projectType
 }
 
-export default ({ infos }:modalInfoProps) => {
+const ModalInfo = ({ infos }:modalInfoProps) => {
     return (
-        <ModalInfo>
+        <ModalInfoComponent>
             {infos && 
                 <>
                     <ModalInfoContainer>
@@ -31,6 +31,9 @@ export default ({ infos }:modalInfoProps) => {
                     </ModalInfoButtons>
                 </>
             }
-        </ModalInfo>
+        </ModalInfoComponent>
     )
-}
+};
+
+ModalInfo.displayName = 'modal-info';
+export default ModalInfo;

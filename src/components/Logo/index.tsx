@@ -5,10 +5,13 @@ type logoProps = {
     title: string,
 } & AnchorHTMLAttributes<HTMLAnchorElement>
 
-export default ({ title, ...props }: logoProps) => {
+const Logo = ({ title, ...props }: logoProps) => {
     return (
         <LinkLogo {...props}>
             <TitleLogo>{title}</TitleLogo>
         </LinkLogo>
     )
-}
+};
+
+Logo.displayName = "logo";
+export default Logo;

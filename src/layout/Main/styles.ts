@@ -1,6 +1,6 @@
 import { styled } from "@/helpers/stitches.config"
 
-export const Main = styled('main', {
+export const MainComponent = styled('main', {
     display: 'flex',
     flexDirection: 'column'
 });
