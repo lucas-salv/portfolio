@@ -42,7 +42,6 @@ const Main = () => {
 
         function checksWindowHeightToEnableScrollEvent() {
             if(window.matchMedia("(min-height:570px)").matches) {
-                console.log(isOpen)
                 if(isOpen) {
                     window.removeEventListener('wheel', toggleMoveUpAnimationClass);
                 } else {
