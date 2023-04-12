@@ -6,11 +6,10 @@ type buttonProps = {
     label: string,
     href?: string,
     target?: string,
-    variant?: 'solid' | 'outline',
     fullWidth?: boolean
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-const Button = ({ label, variant = 'solid', href, target="_blank", fullWidth, ...props}:buttonProps) => {
+const Button = ({ label, href, target="_blank", fullWidth, ...props}:buttonProps) => {
     const btnRefAsLink = useRef<HTMLAnchorElement>(null);
     const btnRef = useRef<HTMLButtonElement>(null);
     useTriggerAnimations('pulse-animation', 'mousedown', href ? btnRefAsLink : btnRef);
@@ -22,7 +21,6 @@ const Button = ({ label, variant = 'solid', href, target="_blank", fullWidth, ..
                     ref={btnRefAsLink}
                     href={href}
                     target={target}
-                    variant={variant}
                     fullWidth={fullWidth}
                 >
                         {label}
@@ -33,7 +31,6 @@ const Button = ({ label, variant = 'solid', href, target="_blank", fullWidth, ..
             <Btn 
                 {...props}
                 ref={btnRef}
-                variant={variant}
                 fullWidth={fullWidth}
             >
                     {label}

@@ -27,7 +27,7 @@ const ModalInfo = ({ infos }:modalInfoProps) => {
                         :
                             <Button label="Demostração" href={infos.links.website_url} fullWidth disabled/>
                         }
-                        <Button label="Repositório" href={infos.links.repo_url} variant="outline" fullWidth/>
+                        <Button label="Repositório" href={infos.links.repo_url} fullWidth/>
                     </ModalInfoButtons>
                 </>
             }

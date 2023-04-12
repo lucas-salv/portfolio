@@ -26,6 +26,7 @@ export const {
       headerColor: "$black3",
       skillsBackgroundColor: "$black1",
       textColor: "$white",
+      btnBackgroundColor: "$black4",
       dangerColor: "$red",
       successColor: "$green",
       contrastColor: "$blue"

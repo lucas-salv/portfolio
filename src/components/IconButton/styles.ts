@@ -4,7 +4,7 @@ import { keyframes } from "@stitches/react";
 const pulse = keyframes({
     '100%': {
         transform: 'scale(1.3, 1.3)',
-        borderColor: '$primaryColor',
+        borderColor: '$textColor',
         opacity: 0
     }
 });
@@ -13,11 +13,18 @@ export const Button = styled('button', {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    border: 'none',
     cursor: 'pointer',
-    transition: 'all .1s ease-in-out',
     position: 'relative',
+    borderRadius: '50%',
     textDecoration: 'none',
+    backgroundColor: '$btnBackgroundColor',
+    color: '$textColor',
+    border: '1px solid $btnBackgroundColor',
+    transition: 'all .2s ease-in-out',
+    
+    '&:hover': {
+        transform: 'scale(90%, 90%)'
+    },
 
     '&[disabled]': {
         opacity: '0.2',
@@ -34,6 +41,7 @@ export const Button = styled('button', {
         height: '100%',
         position: 'absolute',
         border: '1px solid transparent',
+        borderRadius: '50%',
         top: -1,
         left: -1,
         zIndex: -1,
@@ -44,26 +52,6 @@ export const Button = styled('button', {
     },
 
     variants: {
-        variant: {
-            'solid': {
-                backgroundColor: '$primaryColor',
-                color: '$secondaryColor',
-                border: '1px solid $primaryColor',
-                
-                '&:hover': {
-                    transform: 'scale(95%, 95%)'
-                },
-            },
-            'outline': {
-                backgroundColor: '$secondaryColor',
-                color: '$primaryColor',
-                border: '1px solid $primaryColor',
-
-                '&:hover': {
-                    transform: 'scale(95%, 95%)'
-                },
-            }
-        },
         size: {
             'md': {
                 width: '45px',

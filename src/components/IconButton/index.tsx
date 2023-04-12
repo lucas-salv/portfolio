@@ -8,12 +8,11 @@ type buttonProps = {
     icon: JSX.Element,
     href?: string,
     target?: string,
-    variant?: 'solid' | 'outline',
     size?: 'md' | 'lg',
     css?: CSS
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-const IconButton = forwardRef(({ icon, variant = 'solid', size = 'md', href, target, ...props}:buttonProps, ref: Ref<HTMLButtonElement | HTMLAnchorElement>) => {
+const IconButton = forwardRef(({ icon, size = 'md', href, target, ...props}:buttonProps, ref: Ref<HTMLButtonElement | HTMLAnchorElement>) => {
     const btnRefAsLink = useRef<HTMLAnchorElement>(null);
     const btnRef = useRef<HTMLButtonElement>(null);
     useTriggerAnimations('pulse-animation', 'mousedown', href ? btnRefAsLink : btnRef);
@@ -25,7 +24,6 @@ const IconButton = forwardRef(({ icon, variant = 'solid', size = 'md', href, tar
                 ref={ref ? mergeRefs(btnRefAsLink, ref) : btnRefAsLink}
                 href={href}
                 target={target}
-                variant={variant}
                 size={size}
             >
                     {icon && cloneElement(icon, { size: size == 'lg' ? '32px' : '22px' })}
@@ -36,7 +34,6 @@ const IconButton = forwardRef(({ icon, variant = 'solid', size = 'md', href, tar
             <Button 
                 {...props}
                 ref={ref ? mergeRefs(btnRef, ref) : btnRef}
-                variant={variant}
                 size={size}
             >
                     {icon && cloneElement(icon, { size: size == 'lg' ? '32px' : '22px' })}
