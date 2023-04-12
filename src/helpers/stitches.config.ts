@@ -8,8 +8,27 @@ export const {
 } = createStitches({ 
   theme: {
     colors: {
-      primaryColor: "black",
-      secondaryColor: "white",
+      //colors
+      black1: "#2C2C2C",
+      black2: "#303030",
+      black3: "#3A3A3A",
+      black4: "#444444",
+      white: "#ffffff",
+      red: "#F14060",
+      blue: "#2591F5",
+      green: "#32EA91",
+
+
+      // UI colors
+      primaryColor: "white",
+      secondaryColor: "#303030",
+      mainBackgroundColor: "$black2",
+      headerColor: "$black3",
+      skillsBackgroundColor: "$black1",
+      textColor: "$white",
+      dangerColor: "$red",
+      successColor: "$green",
+      contrastColor: "$blue"
     },
     sizes: {
         1: '14px',
