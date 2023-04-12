@@ -13,14 +13,14 @@ const globalStyles = globalCss({
         outlineColor: 'rgba(52, 146, 235, 0.5)',
         outlineOffset: '5px'
       },
-      '::-webkit-scrollbar, ::-moz-scrollbar': {
+      '::-webkit-scrollbar': {
         width: '5px',
         height: '5px',
       },
-      '::-webkit-scrollbar-track, ::-moz-scrollbar-track': {
+      '::-webkit-scrollbar-track': {
         background: 'rgba(0,0,0,0.1)',
       },
-      '::-webkit-scrollbar-thumb, ::-moz-scrollbar-thumb': {
+      '::-webkit-scrollbar-thumb': {
         background: 'rgba(0,0,0,0.2)',
       },
   
