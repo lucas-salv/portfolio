@@ -1,40 +1,8 @@
-import Head from 'next/head'
-import { globalCss } from '@stitches/react'
-import Header from '@/layout/Header'
-import Main from '@/layout/Main'
-import { useEffect, useState } from 'react'
-
-const globalStyles = globalCss({
-  '*': {
-    margin: 0,
-    padding: 0,
-    boxSizing: 'border-box',
-    fontFamily: 'Montserrat, sans-serif',
-    fontSize: '$sizes$1',
-    '&:focus-visible': {
-      outline: '2px solid',
-      outlineColor: 'rgba(52, 146, 235, 0.5)',
-      outlineOffset: '5px'
-    },
-    '::-webkit-scrollbar': {
-      width: '5px',
-      height: '5px',
-    },
-    '::-webkit-scrollbar-track': {
-      background: 'rgba(0,0,0,0.1)',
-    },
-    '::-webkit-scrollbar-thumb': {
-      background: 'rgba(0,0,0,0.2)',
-    },
-
-  },
-  'body': {
-    overflowY: 'hidden',
-    '&.scrolled': {
-      overflowY: 'scroll'
-    }
-  }
-})
+import Head from 'next/head';
+import Header from '@/layout/Header';
+import Main from '@/layout/Main';
+import { useEffect } from 'react';
+import globalStyles from '@/utils/globalCSS';
 
 export default function Home() {
   globalStyles();

@@ -11,7 +11,7 @@ export const MyProjects = styled('section', {
     flexDirection: 'column',
     height: '100vh',
     paddingTop: '0',
-    background: 'linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%)',
+    background: 'linear-gradient(0deg, rgba(48,48,48,1) 0%, rgba(48,48,48,1) 90%, rgba(48,48,48,0) 100%)',
     transition: 'all .5s',
 
     '&.move-up': {
