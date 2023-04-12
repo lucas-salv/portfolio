@@ -4,7 +4,7 @@ import Logo from "@/components/Logo";
 const Header = () => {
     return (
         <HeaderComponent>
-            <Logo href="#" title="Lucas&sdot;Salvador" />
+            <Logo href="#" title="Lucas Salvador" />
         </HeaderComponent>
     )
 };

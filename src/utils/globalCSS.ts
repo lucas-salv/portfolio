@@ -7,6 +7,7 @@ const globalStyles = globalCss({
       boxSizing: 'border-box',
       fontFamily: 'Montserrat, sans-serif',
       fontSize: '$sizes$1',
+      color: '$textColor',
       '&:focus-visible': {
         outline: '2px solid',
         outlineColor: 'rgba(52, 146, 235, 0.5)',

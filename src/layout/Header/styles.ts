@@ -7,7 +7,6 @@ export const HeaderComponent = styled('header', {
     alignItems: 'center',
     width: '100%',
     height: '54px',
-    borderBottom: '1px solid rgba(0,0,0,0.1)',
-    backgroundColor: '$secondaryColor',
+    backgroundColor: '$headerColor',
     zIndex: 3
 })
