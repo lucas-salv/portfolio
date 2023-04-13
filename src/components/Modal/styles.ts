@@ -67,6 +67,7 @@ export const ModalContent = styled('div', {
         width: '900px',
         height: 'auto',
         padding: '$space$3',
+        borderRadius: '40px',
         gap: 20
     },
 
@@ -95,7 +96,7 @@ export const ModalComponent = styled('dialog', {
     maxWidth: '100% !important',
     maxHeight: '100% !important',
     border: 'none',
-    background: 'transparent',
+    background: 'rgba(0,0,0,0.4)',
     overflow: 'hidden',
     zIndex: 7,
 
@@ -106,7 +107,7 @@ export const ModalComponent = styled('dialog', {
         animation: `${fadeOut} .5s forwards !important`,
 
         [`& ${ModalContent}`]: {
-            animation: `${scaleOut} .2s forwards !important`
+            animation: `${scaleOut} .4s forwards !important`
         }
     },
 
@@ -119,13 +120,13 @@ export const ModalComponent = styled('dialog', {
         display: 'flex',
         animation: `${fadeIn} .5s forwards`,
         [`& ${ModalContent}`]: {
-            animation: `${scaleIn} .2s forwards`
+            animation: `${scaleIn} .4s forwards`
         },
     },
 
     '&[open]::backdrop': {
         animation: `${fadeIn} .2s forwards`,
-        backdropFilter: 'blur(2px)'
+        backdropFilter: 'blur(4px)'
     }
 
 });
