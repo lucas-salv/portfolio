@@ -45,7 +45,6 @@ const Modal = ({ children, isOpen, onClose, closeOnOverlayClick }:modalProps)  =
             <ModalContent>
                 <IconButton
                     icon={<IoClose />}
-                    variant="solid"
                     onClick={() => {
                         closeModal()
                         if(onClose) onClose()

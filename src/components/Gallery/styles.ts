@@ -9,6 +9,7 @@ export const MainImageContainer = styled('div', {
     height: 'auto',
     backgroundColor: '$primaryColor',
     marginBottom: '10px',
+    borderRadius: '40px',
     overflow: 'hidden',
 
     '@bpG': {
@@ -49,11 +50,11 @@ export const ImageSliderButton = styled('button', {
     
     '&.left': {
         left: 0,
-        background: 'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%)'
+        background: 'linear-gradient(90deg, rgba(48,48,48,1) 0%, rgba(48,48,48,1) 50%, rgba(48,48,48,0) 100%)'
     },
     '&.right': {
         right: 0,
-        background: 'linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%)'
+        background: 'linear-gradient(270deg, rgba(48,48,48,1) 0%, rgba(48,48,48,1) 50%, rgba(48,48,48,0) 100%)'
     }
 })
 
@@ -70,15 +71,16 @@ export const ImageSlider = styled('div', {
     gap: '10px',
 });
 
-export const Test = styled('img', {
+export const Thumb = styled('img', {
     minWidth: '125px',
     height: '75px',
-    backgroundColor: 'lightgray',
+    backgroundColor: '$headerBackgroundColor',
     cursor: 'pointer',
     border: '2px solid transparent',
+    borderRadius: '20px',
     transition: 'border-color .2s',
 
     '&[activated], &.activated': {
-        borderColor: '$primaryColor'
+        borderColor: '$contrastColor'
     }
 })

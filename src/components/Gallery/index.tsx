@@ -1,5 +1,5 @@
 import { useEffect, useRef, MouseEvent, useState } from 'react'
-import { GalleryComponent, MainImageContainer, MainImage, ImageSliderContainer, ImageSliderSubContainer, ImageSlider, ImageSliderButton, Test } from "./styles"
+import { GalleryComponent, MainImageContainer, MainImage, ImageSliderContainer, ImageSliderSubContainer, ImageSlider, ImageSliderButton, Thumb } from "./styles"
 import { HiOutlineChevronLeft, HiOutlineChevronRight }  from 'react-icons/hi';
 
 type galleryProps = {
@@ -75,7 +75,7 @@ const Gallery = ({ images }:galleryProps) => {
                 <ImageSliderSubContainer ref={imageSliderContainerRef}>
                     <ImageSlider ref={imageSliderRef}>
                         {images.map((el, index) => (
-                            <Test src={el} key={index} onClick={(e) => onClickTest(e)}/>
+                            <Thumb src={el} key={index} onClick={(e) => onClickTest(e)}/>
                         ))}
                     </ImageSlider>
                 </ImageSliderSubContainer>
