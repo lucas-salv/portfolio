@@ -98,8 +98,8 @@ const CardSldr = ({ children, title }:cardSliderProps) => {
             <CardSliderHeader>
                 <CardSliderTitle>{title}</CardSliderTitle>
                 <CardSliderContainerButtons>
-                    <IconButton ref={btnPreviousRef} icon={<HiOutlineChevronLeft />} variant="outline" />
-                    <IconButton ref={btnNextRef} icon={<HiOutlineChevronRight />} variant="outline" />
+                    <IconButton ref={btnPreviousRef} icon={<HiOutlineChevronLeft />} />
+                    <IconButton ref={btnNextRef} icon={<HiOutlineChevronRight />} />
                 </CardSliderContainerButtons>
             </CardSliderHeader>
             <div className="cardContainer" ref={containerRef}>

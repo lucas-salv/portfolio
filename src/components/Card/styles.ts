@@ -8,8 +8,9 @@ export const CardComponent = styled('div', {
     margin: '20px 0',
     backgroundColor: 'lightgray',
     boxShadow: '0px 4px 20px 0px rgba(0,0,0,0.25)',
+    borderRadius: '40px',
     cursor: 'pointer',
-    transition: 'transform .2s, opacity .2s',
+    transition: 'transform .4s, opacity .4s',
 
     '@bp3': {
         '&:hover': {
@@ -30,12 +31,13 @@ export const CardContainerTitle = styled('div', {
     width: '100%',
     height: '100%',
     padding: '20px',
+    borderRadius: '40px',
     background: 'linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%)'
 });
 
 export const CardTitle = styled('h1', {
     fontSize: '$sizes$4',
-    color: '$secondaryColor'
+    color: '$textColor'
 });
 
 export const ComingSoon = styled('p', {
@@ -43,7 +45,7 @@ export const ComingSoon = styled('p', {
     alignSelf: 'flex-start',
     fontSize: '12px',
     marginBottom: '$space$1',
-    color: '$secondaryColor',
+    color: '$textColor',
     padding: '2px $space$1',
-    border: '1px solid $secondaryColor'
+    border: '1px solid $textColor'
 })

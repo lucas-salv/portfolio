@@ -21,7 +21,7 @@ export const CardSlider = styled('div', {
             },
     
             '&:hover > div:not(:hover)': {
-                opacity: 0.5
+                opacity: 0.4
             },
 
             '@bp2': {
