@@ -45,7 +45,6 @@ const CardSldr = ({ children, title }:cardSliderProps) => {
             btnPreviousRef.current?.removeAttribute('disabled');
             if(containerRef.current){
                 if(childRef.current) {
-                    console.log(containerRef.current.scrollLeft)
                     if((containerRef.current.scrollWidth - containerRef.current.clientWidth) < containerRef.current.clientWidth / 2) {
                         containerRef.current.scrollLeft += (containerRef.current.scrollWidth - containerRef.current.clientWidth);
                     } else if((containerRef.current.scrollWidth - containerRef.current.clientWidth) > containerRef.current.clientWidth) {
@@ -56,7 +55,6 @@ const CardSldr = ({ children, title }:cardSliderProps) => {
 
                     setTimeout(() => {
                         if(containerRef.current) {
-                            console.log(containerRef.current.scrollLeft)
                             if((containerRef.current.scrollLeft + containerRef.current.clientWidth) == containerRef.current.scrollWidth) {
                                 btnNextRef.current?.setAttribute('disabled', 'true');
                                 return
@@ -82,7 +80,6 @@ const CardSldr = ({ children, title }:cardSliderProps) => {
 
                 setTimeout(() => {
                     if(containerRef.current) {
-                        console.log(containerRef.current.scrollLeft)
                         if(containerRef.current.scrollLeft < 10) {
                             btnPreviousRef.current?.setAttribute('disabled', 'true');
                             return
